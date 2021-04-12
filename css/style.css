@@ -3,6 +3,7 @@
 
 body{
     margin:0;
+    max-width: 1200px;
 }
 
 
@@ -21,6 +22,12 @@ a{
 }
 
 /* INDEX */
+body{
+    background-color: rgba(26, 69, 97, 0.446);
+}
+img{
+    width: 100px;
+}
 
 /* cabecera */
 
