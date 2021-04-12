@@ -31,7 +31,22 @@ img{
 
 /* cabecera */
 
-/* canciones */
+/* detail-tracks */
+.container-track{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    width: 1200px;
+}
+.article-track{
+    background-color: seagreen;
+    width: 400px;
+    margin: 90px;
+}
+.last track{
+    align-items: center;
+}
 
 /* albums */
 
