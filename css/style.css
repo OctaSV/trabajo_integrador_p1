@@ -30,15 +30,14 @@ img{
 }
 /* cabecera */
 .logo{
-    width: 85px;
-    height: 45x;
+    width: 200px;
+    margin: 20px;
     align-items: center;
 }
 
 .main-header{
     display: flex;
     flex-direction: column;
-    width:100%;
 }
 
 .main-nav{
@@ -48,13 +47,21 @@ img{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: rgba(155, 155, 155, 0.6);
 }
 .main-nav ul li{
     text-align: center;
-    background-color: rgba(155, 155, 155, 0.6);
-    width: 80px
 }
+form{
+    text-align: center;
+    width: 100%;
+}
+form input{
+    border-radius: 50px;
+}
+
+/*Footer*/
 footer{
     display: flex;
     flex-wrap: wrap;
