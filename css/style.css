@@ -61,6 +61,7 @@ form input{
     border-radius: 50px;
 }
 
+
 /*Footer*/
 footer{
     display: flex;
@@ -73,13 +74,15 @@ footer{
 /* CANCIONES INDEX */
 .main-canciones{
     display: flex;
-    flex-direction: column
+    
 }
 .titulo-canciones{
     display: flex;
+    text-align: center;
 }
 .canciones{
     display: flex;
+    flex-direction: column;
     
 }
 
