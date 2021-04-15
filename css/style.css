@@ -67,6 +67,7 @@ form{
 .main-nav ul li
 
 
+
 /* IMG INDEX */
 
 .img-container{
@@ -167,13 +168,4 @@ form{
 }
 .track-data h3{
     font-style: oblique;
-}
-
-/*Footer*/
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    background-color: teal;
 }
