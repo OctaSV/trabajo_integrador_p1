@@ -24,10 +24,7 @@ a{
 body{
     background-color:steelblue
 }
-img{
-    width: 120px;
-    height: 130px
-}
+
 /* cabecera */
 header{
     display: flex;
@@ -69,41 +66,80 @@ form{
 }
 .main-nav ul li
 
-/*Footer*/
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    background-color: teal;
+
+/* IMG INDEX */
+
+.img-container{
+    width: 360px;
+    padding: 20px;
+    height: auto;
+    border-radius: 50px;
 }
+
 
 /* CANCIONES INDEX */
 .main-canciones{
     display: flex;
-    flex-direction: column
+    
 }
 .titulo-canciones{
     display: flex;
+    text-align: center;
 }
 .canciones{
     display: flex;
+    flex-direction: column;
     
 }
 
 /* ALBUMS INDEX */
 .main-albums{
     display: flex;
+    
 }
 .titulo-albums{
     display: flex;
+    text-align: center;
 }
 .albums{
     display: flex;
+    flex-direction: column;
+    
 }
 
 
 /* ARTISTAS INDEX */
+.main-artistas{
+    display: flex;
+    
+}
+.titulo-artistas{
+    display: flex;
+    text-align: center;
+}
+.artistas{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*detail-tracks */
@@ -133,3 +169,11 @@ footer{
     font-style: oblique;
 }
 
+/*Footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: teal;
+}
