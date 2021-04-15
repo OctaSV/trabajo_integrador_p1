@@ -23,13 +23,67 @@ a{
 
 /* INDEX */
 body{
-    background-color: rgba(26, 69, 97, 0.446);
+    background-color: rgba(75, 158, 212, 0.446);
 }
 img{
+    width: 120px;
+    height: 130px
+}
+/* cabecera */
+.logo{
     width: 100px;
+    height: 100px;
 }
 
-/* cabecera */
+.main-header{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.main-nav{
+    width: 100%;
+}
+.main-nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main-nav ul li{
+    text-align: center;
+    background-color: rgba(155, 155, 155, 0.6);
+    width: 80px
+
+}
+
+/* CANCIONES INDEX */
+.main-canciones{
+    display: flex;
+    flex-direction: column
+}
+.titulo-canciones{
+    display: flex;
+}
+.canciones{
+    display: flex;
+    
+}
+
+/* ALBUMS INDEX */
+.main-albums{
+    display: flex;
+}
+.titulo-albums{
+    display: flex;
+}
+.albums{
+    display: flex;
+}
+
+
+/* ARTISTAS INDEX */
+
 
 /* detail-tracks */
 .container-track{
@@ -48,6 +102,3 @@ img{
     align-items: center;
 }
 
-/* albums */
-
-/* artistas */
