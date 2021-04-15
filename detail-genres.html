@@ -8,20 +8,21 @@
     <title>Document</title>
 </head>
 <body>
+    
     <!-- header -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="cajalogo">
-                <img class="logo" src="./img/logo.jpg.ejemplo.png" alt="spotify_logo">
+    <header>
+        <div class="cajalogo">
+            <img class="logo" src="./img/logo.jpg.ejemplo.png" alt="logo">
+        </div>
+        <form action="./search-results.html">
+            <div class="barrabusqueda">
+                <input type="text" name="search" value="" placeholder="canciones, artistas, albums...">
             </div>
-            <form action="./search-results.html" class="formulario">
-                <div>
-                    <input type="text" name="search" value="" placeholder="canciones, artistas, albums...">
-                </div>
-                <div>
-                    <button type="submit">Buscar</button>
-                </div>
-            </form>
+            <div class="divbutton">
+                <button type="submit">Buscar</button>
+            </div>
+        </form>
+        <nav class="main-nav">
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./detail-track.html">Canciones</a></li>
