@@ -3,7 +3,6 @@
 
 body{
     margin:0;
-    max-width: 1200px;
 }
 
 
@@ -23,7 +22,7 @@ a{
 
 /* INDEX */
 body{
-    background-color: rgba(75, 158, 212, 0.446);
+    background-color:steelblue
 }
 img{
     width: 120px;
@@ -54,7 +53,13 @@ img{
     text-align: center;
     background-color: rgba(155, 155, 155, 0.6);
     width: 80px
-
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background-color: teal;
 }
 
 /* CANCIONES INDEX */
@@ -91,14 +96,24 @@ img{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content:center;
-    width: 1200px;
 }
 .article-track{
     background-color: seagreen;
-    width: 400px;
-    margin: 90px;
+    width: 300px;
+    margin: 60px;
+    height: 460px;
+    border-radius: 50px;
 }
-.last track{
-    align-items: center;
+div img{
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    border-radius: 50px;
+}
+.track-data{
+    text-align: center;
+}
+.track-data h3{
+    font-style: oblique;
 }
 
