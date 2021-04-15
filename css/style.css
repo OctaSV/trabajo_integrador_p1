@@ -65,6 +65,22 @@ form{
     background-color: rgba(155, 155, 155, 0.6);
 }
 
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: darkblue;
+    width: 100%;
+    justify-content: space-between;
+}
+.contact{
+    background-color: brown;
+}
+.owners{
+    background-color: brown;
+}
+
 /* IMG INDEX */
 .img-container{
     width: 360px;
@@ -133,7 +149,7 @@ form{
     background-color: seagreen;
     width: 300px;
     margin: 60px;
-    height: 460px;
+    height: 680px;
     border-radius: 30px;
 }
 .article-track div img{
@@ -147,4 +163,12 @@ form{
 }
 .track-data h3{
     font-style: oblique;
+}
+iframe{
+    margin-bottom: 15px;
+}
+.agregarplaylist{
+    background-color: antiquewhite;
+    border:double;
+    padding: 10px;
 }
