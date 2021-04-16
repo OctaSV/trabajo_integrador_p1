@@ -1,10 +1,18 @@
-*{box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+}
 
-
+/*Reset*/
 body{
     margin:0;
 }
-
+h4, a{
+    font-family: 'Montserrat', sans-serif;   
+    font-weight: lighter;
+}
+h3{
+    font-weight: bold;
+}
 
 ul, ol{
     padding:0;
@@ -23,18 +31,17 @@ a{
 /* INDEX */
 body{
     background-color:steelblue
+    
 }
 
 /* cabecera */
 header{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 30px 40px;
-    width: 100%;
     max-height: 100px;
-}
-.cajalogo{
-    width: 20%;
+    justify-content: space-around;
 }
 .logo{
     width: 135px;
@@ -49,14 +56,14 @@ form{
     width: 82%;
     height: 30px;
 }
-.divbutton{
-    width: 12%;
-    border-radius: 5px;
+#centroheader{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
 .main-nav{
     display: flex;
     width: 100%;
-    align-items: 
 }
 .main-nav ul{
     display: flex;
@@ -161,9 +168,7 @@ footer{
 .track-data{
     text-align: center;
 }
-.track-data h3{
-    font-style: oblique;
-}
+
 iframe{
     margin-bottom: 15px;
 }
