@@ -41,6 +41,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: transparent;
     width: 80%;
 }
 .main-nav{
