@@ -186,21 +186,24 @@ iframe{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content:center;
+    background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
+    background-attachment: fixed;
 }
-.article-album{
+.section-album{
     background-color: rgb(200, 200, 55);
     width: 300px;
     margin: 60px;
     height: 680px;
     border-radius: 15px;
+    flex-direction: row;
 }
-.article-album div img{
+.section-album article img{
     width: 100%;
     padding: 20px;
     height: auto;
     border-radius: 25px;
 }
-.track-data{
+.album-data{
     text-align: center;
 }
 iframe{
