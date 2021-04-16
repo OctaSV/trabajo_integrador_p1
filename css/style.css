@@ -214,3 +214,33 @@ iframe{
 
 
 
+/* DETAIL ARTIST */
+
+.da-main{
+    display: flex;
+    flex-direction: column;
+}
+.da-article{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-color: rgb(200, 200, 55);
+}
+.da-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 95%;
+    margin: 20px;
+}
+.da-nombre{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+}
+.da-div-texto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+}
+.da-tracks{
+    font-family: 'Dela Gothic One', cursive;
+}
