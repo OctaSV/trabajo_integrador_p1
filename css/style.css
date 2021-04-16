@@ -6,6 +6,21 @@
 body{
     margin:0;
 }
+
+ul, ol{
+    padding:0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;color: #000;
+}
+
+/* INDEX */
+body{
+    background-image: linear-gradient(to top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
 h4, a{
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
@@ -13,27 +28,6 @@ h4, a{
 h3{
     font-weight: bold;
 }
-
-ul, ol{
-    padding:0;
-}
-
-
-li{
-    list-style-type: none;
-}
-
-
-a{
-    text-decoration: none;color: #000;
-}
-
-/* INDEX */
-body{
-    background-color:steelblue
-    
-}
-
 /* cabecera */
 header{
     display: flex;
@@ -59,12 +53,8 @@ header{
     justify-content:space-evenly;
 }
 form{
-    width: 100%;
     border-radius: 5px;
     margin: 20px 10px 0px 510px;
-}
-.barrabusqueda{
-    
 }
 
 /*footer*/
@@ -148,8 +138,7 @@ footer{
     justify-content:center;
 }
 .article-track{
-    background-color: seagreen;
-    width: 300px;
+    background-image: linear-gradient(to bottom, #490303, #700d14, #9b1a1f, #c8272b, #f63636);    width: 300px;
     margin: 60px;
     height: 680px;
     border-radius: 15px;
