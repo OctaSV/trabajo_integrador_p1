@@ -160,3 +160,35 @@ iframe{
     border:double;
     padding: 10px;
 }
+
+/* detail-album */
+.container-album{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+}
+.article-album{
+    background-color: seagreen;
+    width: 300px;
+    margin: 60px;
+    height: 680px;
+    border-radius: 15px;
+}
+.article-album div img{
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    border-radius: 25px;
+}
+.track-data{
+    text-align: center;
+}
+iframe{
+    margin-bottom: 15px;
+}
+.agregarplaylist{
+    background-color: antiquewhite;
+    border:double;
+    padding: 10px;
+}
