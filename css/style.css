@@ -19,12 +19,11 @@ a{
 
 /* INDEX */
 body{
-    background-image: linear-gradient(to top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-}
-h4, a{
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
 }
+/*h4, a{
+}*/
 h3{
     font-weight: bold;
 }
@@ -66,6 +65,7 @@ footer{
     background-color: darkblue;
     width: 100%;
     justify-content: space-between;
+    margin-top: 50px;
 }
 .contact{
     background-color: brown;
@@ -75,22 +75,37 @@ footer{
 }
 
 /* IMG INDEX */
-.img-container{
-    width: 360px;
+
+.index-img{
+    width: 330px;
     padding: 20px;
-    height: auto;
+    height: 330px;
     border-radius: 50px;
 }
+/* TITULOS INDEX */
+.titulos-index{
+    color: yellow;
+    font-size: 36px;
+    font-family: 'Antonio', sans-serif;
+    background-color: rgb(0, 0, 0);
+}
 
-
+/* ELEMENTOS */
+.titulo-elementos{
+    font-size: 20px;
+    text-align: center  ;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.texto-elementos{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
 /* CANCIONES INDEX */
 .main-canciones{
     display: flex;
+    justify-content: space-between;
     
-}
-.titulo-canciones{
-    display: flex;
-    text-align: center;
 }
 .canciones{
     display: flex;
@@ -101,11 +116,7 @@ footer{
 /* ALBUMS INDEX */
 .main-albums{
     display: flex;
-    
-}
-.titulo-albums{
-    display: flex;
-    text-align: center;
+    justify-content: space-between;
 }
 .albums{
     display: flex;
@@ -117,12 +128,10 @@ footer{
 /* ARTISTAS INDEX */
 .main-artistas{
     display: flex;
+    justify-content: space-between;
     
 }
-.titulo-artistas{
-    display: flex;
-    text-align: center;
-}
+
 .artistas{
     display: flex;
     flex-direction: column;
@@ -168,21 +177,24 @@ iframe{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content:center;
+    background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
+    background-attachment: fixed;
 }
-.article-album{
-    background-color: seagreen;
+.section-album{
+    background-color: rgb(200, 200, 55);
     width: 300px;
     margin: 60px;
     height: 680px;
     border-radius: 15px;
+    flex-direction: row;
 }
-.article-album div img{
+.section-album article img{
     width: 100%;
     padding: 20px;
     height: auto;
     border-radius: 25px;
 }
-.track-data{
+.album-data{
     text-align: center;
 }
 iframe{
@@ -192,4 +204,37 @@ iframe{
     background-color: antiquewhite;
     border:double;
     padding: 10px;
+}
+
+
+
+/* DETAIL ARTIST */
+
+.da-main{
+    display: flex;
+    flex-direction: column;
+}
+.da-article{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-color: rgb(200, 200, 55);
+}
+.da-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 95%;
+    margin: 20px;
+}
+.da-nombre{
+    font-family: 'Roboto', sans-serif;
+    font-size: 42px;
+}
+.da-div-texto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+}
+.da-tracks{
+    font-family: 'Dela Gothic One', cursive;
 }
