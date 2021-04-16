@@ -103,10 +103,11 @@ footer{
     font-size: 20px;
     text-align: center  ;
     margin: 0px;
-
+    font-family: 'Poppins', sans-serif;
 }
 .texto-elementos{
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 /* CANCIONES INDEX */
 .main-canciones{
