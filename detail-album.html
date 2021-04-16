@@ -9,19 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- header -->
-    <header>
-        <div class="cajalogo">
+     <!-- header -->
+     <header>
+        <div>
             <img class="logo" src="./img/logo.jpg.ejemplo.png" alt="logo">
         </div>
-        <form action="./search-results.html">
-            <div class="barrabusqueda">
-                <input type="text" name="search" value="" placeholder="canciones, artistas, albums...">
-            </div>
-            <div class="divbutton">
-                <button type="submit">Buscar</button>
-            </div>
-        </form>
+        <div id="centroheader">
         <nav class="main-nav">
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
@@ -32,7 +25,13 @@
                 <li><a href="./playlist.html">Playlist</a></li>
             </ul>
         </nav>
+            <form action="./search-results.html" class="barrabusqueda">
+                    <input type="text" name="search" value="" placeholder="Canciones, artistas, albums...">
+                    <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
+
      <!--body-->
      <container class="container-track">
         <article class="article-track">
