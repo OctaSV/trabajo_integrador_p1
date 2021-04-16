@@ -156,7 +156,7 @@ footer{
     justify-content:center;
 }
 .article-track{
-    background-color: seagreen;
+    background-color: rgb(200, 200, 55);
     width: 300px;
     margin: 60px;
     height: 680px;
@@ -188,7 +188,7 @@ iframe{
     justify-content:center;
 }
 .article-album{
-    background-color: seagreen;
+    background-color: rgb(200, 200, 55);
     width: 300px;
     margin: 60px;
     height: 680px;
