@@ -203,21 +203,28 @@ video{
     justify-content:center;
 }
 .section-album{
-    background-color: rgb(200, 200, 55);
-    width: 300px;
+    background-color: rgba(255, 0, 221, 0.5);
+    width: 90%;
     margin: 60px;
-    height: 680px;
     border-radius: 15px;
     flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .section-album article img{
-    width: 100%;
+    width: 400px;
     padding: 20px;
     height: auto;
     border-radius: 25px;
 }
 .album-data{
     text-align: center;
+    justify-content: flex-end;
+}
+.album-songs{
+    text-align: center;
+    font-weight: bold;
 }
 iframe{
     margin-bottom: 15px;
