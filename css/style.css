@@ -17,11 +17,14 @@ a{
     text-decoration: none;color: #000;
 }
 
-/* INDEX */
+/* Colores, Fuentes y Fondos Principales */
 body{
+    background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
+    background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
 }
+
 /*h4, a{
 }*/
 h3{
@@ -29,7 +32,6 @@ h3{
 }
 /* cabecera */
 header{
-    background-image: linear-gradient(to left, #000000, #393839, #727071, #b1aeae, #f4f0f0);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -43,18 +45,26 @@ header{
     flex-direction: column;
     width: 80%;
 }
-.main-nav{
+nav{
     width: 80%;
     margin-left: 140px;
 }
-.main-nav ul{
+nav ul{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
 }
+nav{
+    color: white;
+    font-weight: bold;
+}
 form{
+    width: 30%;
     border-radius: 5px;
-    margin: 20px 10px 0px 510px;
+    margin: 20px 0px 0px 470px;
+}
+form input{
+    width: 250px;
 }
 
 /*footer*/
@@ -75,12 +85,17 @@ footer{
 }
 
 /* IMG INDEX */
-
 .index-img{
-    width: 330px;
+    width: 250px;
     padding: 20px;
-    height: 330px;
-    border-radius: 50px;
+    height: 250px;
+    border-radius: 20px;
+}
+.main-canciones img{
+    border-radius: 70px;
+}
+.main-artistas img{
+    border-radius: 150px;
 }
 /* TITULOS INDEX */
 .titulos-index{
@@ -104,7 +119,9 @@ footer{
 /* CANCIONES INDEX */
 .main-canciones{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
     
 }
 .canciones{
@@ -116,7 +133,9 @@ footer{
 /* ALBUMS INDEX */
 .main-albums{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 .albums{
     display: flex;
@@ -128,7 +147,9 @@ footer{
 /* ARTISTAS INDEX */
 .main-artistas{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
     
 }
 
@@ -180,8 +201,6 @@ video{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content:center;
-    background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
-    background-attachment: fixed;
 }
 .section-album{
     background-color: rgb(200, 200, 55);
