@@ -106,10 +106,14 @@ footer{
     text-align: center  ;
     margin: 0px;
     font-family: 'Poppins', sans-serif;
+    color: yellow;
+    background-color: rgb(0, 0, 0);
 }
 .texto-elementos{
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    color: yellow;
+    background-color: rgb(0, 0, 0);
 }
 /* CANCIONES INDEX */
 .main-canciones{
