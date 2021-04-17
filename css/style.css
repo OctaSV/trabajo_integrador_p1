@@ -86,17 +86,12 @@ footer{
 
 /* IMG INDEX */
 .index-img{
-    width: 250px;
+    width: 330px;
+    height: 330px;
     padding: 20px;
-    height: 250px;
-    border-radius: 20px;
+    border-radius: 28px;
 }
-.main-canciones img{
-    border-radius: 70px;
-}
-.main-artistas img{
-    border-radius: 150px;
-}
+
 /* TITULOS INDEX */
 .titulos-index{
     color: yellow;
@@ -111,19 +106,22 @@ footer{
     text-align: center;
     margin: 0px;
     font-family: 'Poppins', sans-serif;
+    color: yellow;
+    background-color: rgb(0, 0, 0);
 }
 .texto-elementos{
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    color: yellow;
+    background-color: rgb(0, 0, 0);
 }
 /* CANCIONES INDEX */
 .main-canciones{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: solid green;
-    border-width: 20px;
-    margin: 0px 20px;
+    width: 100%;
+    background-color: rgba(255, 0, 221, 0.5);
 }
 .canciones{
     display: flex;
@@ -137,6 +135,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    background-color: rgba(255, 0, 221, 0.5);
 }
 .albums{
     display: flex;
@@ -151,6 +150,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    background-color: rgba(255, 0, 221, 0.5);
 }
 .artistas{
     display: flex;
@@ -202,21 +202,28 @@ video{
     justify-content:center;
 }
 .section-album{
-    background-color: rgb(200, 200, 55);
-    width: 300px;
+    background-color: rgba(255, 0, 221, 0.5);
+    width: 90%;
     margin: 60px;
-    height: 680px;
     border-radius: 15px;
     flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .section-album article img{
-    width: 100%;
+    width: 400px;
     padding: 20px;
     height: auto;
     border-radius: 25px;
 }
 .album-data{
     text-align: center;
+    justify-content: flex-end;
+}
+.album-songs{
+    text-align: center;
+    font-weight: bold;
 }
 iframe{
     margin-bottom: 15px;
