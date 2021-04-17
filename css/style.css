@@ -29,6 +29,7 @@ h3{
 }
 /* cabecera */
 header{
+    background-image: linear-gradient(to left, #000000, #393839, #727071, #b1aeae, #f4f0f0);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -40,7 +41,6 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: transparent;
     width: 80%;
 }
 .main-nav{
@@ -162,8 +162,11 @@ footer{
 .track-data{
     text-align: center;
 }
-iframe{
-    margin-bottom: 15px;
+video{
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 10px 0px 10px;
 }
 .agregarplaylist{
     background-color: antiquewhite;
