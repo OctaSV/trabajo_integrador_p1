@@ -225,11 +225,11 @@ video{
 .section-album{
     background-color: rgba(255, 0, 221, 0.5);
     width: 90%;
-    margin: 60px;
-    border-radius: 15px;
-    flex-direction: row;
+    margin: 60px 60px 0px 60px;
+    border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 }
 .section-album article img{
@@ -239,12 +239,12 @@ video{
     border-radius: 25px;
 }
 .album-data{
-    text-align: center;
-    justify-content: flex-end;
+    text-align: start;
 }
 .album-songs{
     text-align: center;
     font-weight: bold;
+    margin-left: 170px;
 }
 iframe{
     margin-bottom: 15px;
@@ -277,7 +277,8 @@ iframe{
 }
 .da-nombre{
     font-family: 'Roboto', sans-serif;
-    font-size: 42px;
+    font-size: 40px;
+    margin: 70px 0px 0px 0px;
 }
 .da-div-texto{
     display: flex;
