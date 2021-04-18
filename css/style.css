@@ -291,6 +291,10 @@ iframe{
 
 /* GENRES */
 
+section.genres{
+    flex-direction: column;
+    display: flex;
+}
 article.genres{
     background-color: rgba(255, 0, 221, 0.5);
     margin-left: 3%;
@@ -299,7 +303,7 @@ article.genres{
     display: flex;
     flex-direction: row;
 }
-article.genres h2{
+article.genres h1{
     font-size: 40px;
 }
 ul.genres{
@@ -308,4 +312,37 @@ ul.genres{
 }
 ul.genres li{
     list-style-type: disc;
+}
+section.detail-genres{
+    background-color: rgba(255, 0, 221, 0.5);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+article.detail-genres{
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: row;
+}
+.detail-genres h1{
+    font-size: 40px;
+    color: white;
+    margin-left: 20px;
+}
+ul.detail-genres{
+    font-size: 50px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ul.detail-genres li{
+    list-style-type: square;
+    color: white;
+}
+.detail-genres img{
+    width: 300px;
+    height: 300px;
 }
