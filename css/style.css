@@ -24,8 +24,8 @@ body{
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
 }
-h4, a{
-    color: rgb(214, 191, 191);
+a{
+    color: #F8F1F1;
 }
 h3{
     font-weight: bold;
@@ -36,7 +36,7 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     height: 160px;
-    background-image: linear-gradient(to bottom, #470044, #460047f3, #43004bde, #42004e86, #3f005200);
+    background-image: linear-gradient(to bottom, #470044, #460047, #43004bf1, #42004eb2, #3f005200);
 }
 .logo{
     width: 135px;
@@ -65,13 +65,13 @@ form{
 form input{
     width: 240px;
     height: 20px;
-    border-radius: 25px;
-    border: solid rgb(214, 191, 191); 
-    background-color: rgb(214, 191, 191);
+    border-radius: 5px;
+    border: solid #F8F1F1; 
+    background-color: #F8F1F1;
 }
 form button{
     border-radius: 5px;
-    background-color: rgb(214, 191, 191);
+    background-color: #F8F1F1;
 }
 
 /*footer*/
@@ -79,16 +79,30 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: darkblue;
     width: 100%;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
+    background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
 }
 .contact{
-    background-color: brown;
+    margin-top: 200px;
+    width: 33.3%;
+    text-align: center;
+    color: #F8F1F1;
+}
+.contentcontact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 40px;
 }
 .owners{
-    background-color: brown;
+    margin-top: 200px;
+    width: 33.3%;
+    text-align: center;
+    color: #F8F1F1;
 }
 
 /* IMG INDEX */
