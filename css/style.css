@@ -289,5 +289,23 @@ iframe{
     font-family: 'Dela Gothic One', cursive;
 }
 
+/* GENRES */
 
-/*Playlist*/
+article.genres{
+    background-color: rgba(255, 0, 221, 0.5);
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 3%;
+    display: flex;
+    flex-direction: row;
+}
+article.genres h2{
+    font-size: 40px;
+}
+ul.genres{
+    font-size: 30px;
+    margin: 3%;
+}
+ul.genres li{
+    list-style-type: disc;
+}
