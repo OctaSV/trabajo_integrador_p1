@@ -81,7 +81,6 @@ footer{
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    margin-top: 20px;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
 }
 .contact{
