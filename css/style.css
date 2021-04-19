@@ -24,11 +24,22 @@ body{
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
 }
-a{
+header a{
     color: #F8F1F1;
+}
+footer a{
+    color: #F8F1F1;
+}
+span .titulos-index, .titulo-elementos, .texto-elementos{
+    color: rgb(131, 166, 231);
+    background-color: rgba(25, 0, 114, 0.81);
+    border-radius: 5px;
 }
 h3{
     font-weight: bold;
+}
+.track-data h4 a{
+    color: black;
 }
 /* cabecera */
 header{
@@ -39,7 +50,8 @@ header{
     background-image: linear-gradient(to bottom, #470044, #460047, #43004bf1, #42004eb2, #3f005200);
 }
 .logo{
-    width: 135px;
+    width: 100px;
+    margin-left: 20px;
 }
 #centroheader{
     display: flex;
@@ -114,10 +126,8 @@ footer{
 
 /* TITULOS INDEX */
 .titulos-index{
-    color: yellow;
     font-size: 36px;
     font-family: 'Antonio', sans-serif;
-    background-color: rgb(0, 0, 0);
     margin: 0px 20px 0px 20px;
 }
 /* ELEMENTOS */
@@ -126,14 +136,10 @@ footer{
     text-align: center;
     margin: 0px;
     font-family: 'Poppins', sans-serif;
-    color: yellow;
-    background-color: rgb(0, 0, 0);
 }
 .texto-elementos{
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: yellow;
-    background-color: rgb(0, 0, 0);
 }
 /* CANCIONES INDEX */
 .main-canciones{
@@ -141,7 +147,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.336);
 }
 .canciones{
     display: flex;
@@ -180,7 +186,6 @@ footer{
 }
 
 
-
 /*detail-tracks */
 .container-track{
     display: flex;
@@ -189,7 +194,8 @@ footer{
     justify-content:center;
 }
 .article-track{
-    background-image: linear-gradient(to bottom, #490303, #700d14, #9b1a1f, #c8272b, #f63636);    width: 300px;
+    background-color: rgba(255, 0, 221, 0.5);
+    width: 300px;
     margin: 60px;
     height: 680px;
     border-radius: 15px;
@@ -209,7 +215,8 @@ video{
     margin: 0px 0px 20px 0px;
     padding: 0px 10px 0px 10px;
 }
-.agregarplaylist{
+.agregarplaylist:hover{
+    color: #F8F1F1;
     background-color: antiquewhite;
     border:double;
     padding: 10px;
@@ -276,7 +283,6 @@ iframe{
     margin: 20px;
 }
 .da-nombre{
-    font-family: 'Roboto', sans-serif;
     font-size: 40px;
     margin: 70px 0px 0px 0px;
 }
@@ -285,9 +291,7 @@ iframe{
     flex-direction: column;
     margin-left: 35px;
 }
-.da-tracks{
-    font-family: 'Dela Gothic One', cursive;
-}
+
 
 /* GENRES */
 
