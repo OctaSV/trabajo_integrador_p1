@@ -45,6 +45,9 @@ h3{
 .track-data h4 a{
     color: black;
 }
+container.genres article ul li a{
+    color: #F8F1F1;
+}
 /* cabecera */
 header{
     display: flex;
@@ -55,7 +58,8 @@ header{
 }
 .logo{
     width: 100px;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-left: 30px;
 }
 #centroheader{
     display: flex;
@@ -221,6 +225,7 @@ video{
     height: auto;
     margin-bottom: 20px;
     padding: 0px 10px 0px 10px;
+    border: solid black 0;
 }
 .agregarplaylist:hover{
     color: #F8F1F1;
@@ -301,23 +306,21 @@ iframe{
 
 
 /* GENRES */
-
-section.genres{
+container.genres{
     display: flex;
     flex-wrap: wrap;
 }
 article.genres h1{
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     font-size: 40px;
-    justify-content: center;
+    text-align: center;
 }
 article.genres{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    border-radius: 5px;
     background-color: rgba(255, 0, 221, 0.5);
     margin-left: 3%;
     margin-right: 3%;
@@ -326,10 +329,7 @@ article.genres{
 ul.genres{
     font-size: 30px;
     width: 25%;
-}
-ul.genres li{
-    width: 25%;
-    list-style-type: disc;
+    text-align: center;
 }
 
 /*Detail-genders*/
@@ -365,4 +365,12 @@ ul.detail-genres li{
 .detail-genres img{
     width: 250px;
     height: 250px;
+}
+
+@media (max-width: 420px){
+    .main-canciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
