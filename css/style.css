@@ -17,8 +17,12 @@ a{
     text-decoration: none;
 }
 
-/* Colores, Fuentes y Fondos Principales */
+/* Estructura principal, Colores, Fuentes y Fondos Principales */
 body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: stretch;
     background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;   
@@ -70,8 +74,9 @@ nav ul{
     justify-content:space-evenly;
 }
 form{
-    width: 30%;
-    margin: 20px 0px 0px 470px;
+    width: 80%;
+    text-align: center;
+    margin: 20px 0px 0px 140px;
     color: rgb(214, 191, 191);
 }
 form input{
@@ -91,12 +96,12 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-top: 140px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
 }
 .contact{
-    margin-top: 200px;
     width: 33.3%;
     text-align: center;
     color: #F8F1F1;
@@ -107,10 +112,12 @@ footer{
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 40px;
+}
+.terms{
+    width: 33.3%;
+    text-align: center;
 }
 .owners{
-    margin-top: 200px;
     width: 33.3%;
     text-align: center;
     color: #F8F1F1;
@@ -185,7 +192,6 @@ footer{
     
 }
 
-
 /*detail-tracks */
 .container-track{
     display: flex;
@@ -196,7 +202,8 @@ footer{
 .article-track{
     background-color: rgba(255, 0, 221, 0.5);
     width: 300px;
-    margin: 60px;
+    margin: 20px;
+    margin-right: 50px;
     height: 680px;
     border-radius: 15px;
 }
@@ -212,7 +219,7 @@ footer{
 video{
     width: 100%;
     height: auto;
-    margin: 0px 0px 20px 0px;
+    margin-bottom: 20px;
     padding: 0px 10px 0px 10px;
 }
 .agregarplaylist:hover{
