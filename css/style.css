@@ -151,7 +151,6 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(255, 0, 221, 0.336);
 }
 .canciones{
     display: flex;
@@ -165,7 +164,6 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(255, 0, 221, 0.5);
 }
 .albums{
     display: flex;
@@ -180,7 +178,6 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(255, 0, 221, 0.5);
     padding-bottom: 20px;
 }
 .artistas{
@@ -395,9 +392,35 @@ ul.detail-genres li{
 
 
 @media (max-width: 420px){
+    .titulos-index{
+        margin-top: 100px;
+    }
     .main-canciones{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .main-albums{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-artistas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-image: linear-gradient(to bottom, #470044, #460047, #43004bf1, #42004eb2, #3f005200);
+    }
+    #centroheader{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 80%;
+        align-content: center;
     }
 }
