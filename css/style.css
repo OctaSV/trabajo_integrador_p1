@@ -100,7 +100,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-top: 140px;
+    padding-top: 200px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
@@ -112,14 +112,24 @@ footer{
 }
 .contentcontact{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
+}
+.contentcontact ul li{
+    margin-bottom: 15px;
+}
+.contact h4{
+    margin-bottom: 5px;
 }
 .terms{
     width: 33.3%;
     text-align: center;
+    margin-top: 50px;
+}
+.terms ul li i{
+    margin-top: 10px;
+    color: whitesmoke;
 }
 .owners{
     width: 33.3%;
@@ -366,6 +376,18 @@ ul.detail-genres li{
     width: 250px;
     height: 250px;
 }
+
+/*PlayList*/
+.table{
+    background-color: rgba(255, 0, 221, 0.5);
+    border-radius: 10px;
+    margin-left: 80px;
+    padding: 50px;
+}
+.h1playlist{
+    color: whitesmoke;
+}
+
 
 @media (max-width: 420px){
     .main-canciones{

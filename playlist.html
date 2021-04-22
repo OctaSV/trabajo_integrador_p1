@@ -31,27 +31,118 @@
     </header>
 
     <!--PlaylistGrid-->
-    <main>
-
-    </main>
+    <container>
+        <span>
+            <h1 class="h1playlist"><strong>Tu Playlist</strong></h1>
+        </span>
+        <style>
+            tr{
+                text-align: left;
+            }
+            th{
+                border-bottom: 1px solid rgb(77, 6, 77);
+            }
+            .num{
+                width: 5%;
+                text-align: center;
+            }
+            .play{
+                width: 10%;
+                text-align: center;
+            }
+            .play a{
+                color: #F8F1F1;
+            }
+            .play a i:hover{
+                color: black;
+            }
+        </style>
+        <table style="width: 90%;" class="table">
+            <tr>
+                <th class="num">
+                    #
+                </th>
+                <th>
+                    TÍTULO
+                </th>
+                <th>
+                    ALBUM
+                </th>
+                <th>
+                    PLAY
+                </th>
+            </tr>
+            <tr>
+                <td class="num">
+                    (1)
+                </td>
+                <td>
+                    (título canción1)
+                </td>
+                <td>
+                    (album canción1)
+                </td>
+                <td class="play">
+                    <a href=""><i class="far fa-play-circle"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="num">
+                    (2)
+                </td>
+                <td>
+                    (título canción2)
+                </td>
+                <td>
+                    (album canción2)
+                </td>
+                <td class="play">
+                    <a href=""><i class="far fa-play-circle"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="num">
+                    (3)
+                </td>
+                <td>
+                    (título canción3)
+                </td>
+                <td>
+                    (album canción3)
+                </td>
+                <td class="play">
+                    <a href=""><i class="far fa-play-circle"></i></a>
+                </td>
+            </tr>
+        </table>
+    </container>
 
     <!--footer-->
     <footer>
         <section class="contact">
             <h4 class=""><strong>Contact</strong></h4>
             <article class="contentcontact">
-                <div>
-                    <i class="fas fa-envelope-square"></i>
-                    <a href="osonciniviola@udesa.edu.ar">Email</a> 
-                </div>
-                <div>
-                    <i class="fas fa-mobile-alt"></i>
-                    <a href="2964-445566">Cellphone</a>
-                </div>
+                <ul>
+                    <li>
+                        <a href="osonciniviola@udesa.edu.ar">Email</a> 
+                        <i class="fas fa-envelope-square"></i>
+                    </li>
+                    <li>
+                        <a href="2964-445566">Cellphone</a>
+                        <i class="fas fa-mobile-alt"></i>
+                    </li>
+                </ul>
             </article>
         </section>
         <section class="terms">
-            <a href="">Privacy & Legal</a>
+            <ul>
+                <li>
+                    <a href="">Privacy & Legal</a>
+                </li>
+                <li>
+                    <i class="fab fa-slack"></i>
+                </li>
+            </ul>
         </section>
         <section class="owners">
             <h4>Owners</h4>
