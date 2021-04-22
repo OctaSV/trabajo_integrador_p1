@@ -17,12 +17,8 @@ a{
     text-decoration: none;
 }
 
-/* Estructura principal, Colores, Fuentes y Fondos Principales */
+/* Estructura principal, Colores principales, Fuentes y Fondos Principales */
 body{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: stretch;
     background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;   
@@ -34,20 +30,7 @@ header a{
 footer a{
     color: #F8F1F1;
 }
-span .titulos-index, .titulo-elementos, .texto-elementos{
-    color: rgb(131, 166, 231);
-    background-color: rgba(25, 0, 114, 0.81);
-    border-radius: 5px;
-}
-h3{
-    font-weight: bold;
-}
-.track-data h4 a{
-    color: black;
-}
-container.genres article ul li a{
-    color: #F8F1F1;
-}
+
 /* cabecera */
 header{
     display: flex;
@@ -206,42 +189,65 @@ footer{
     
 }
 
+/*Colores Index*/
+span .titulos-index, .titulo-elementos, .texto-elementos{
+    color: rgb(131, 166, 231);
+    background-color: rgba(25, 0, 114, 0.81);
+    border-radius: 5px;
+}
+
 /*detail-tracks */
 .container-track{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:center;
+    width: 100%;
+    justify-content: center;
 }
 .article-track{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+    width: 60%;
+    padding: 10px 0px 10px 0px;
     background-color: rgba(255, 0, 221, 0.5);
-    width: 300px;
-    margin: 20px;
-    margin-right: 50px;
-    height: 680px;
-    border-radius: 15px;
-}
-.article-track div img{
-    width: 100%;
-    padding: 20px;
-    height: auto;
-    border-radius: 25px;
 }
 .track-data{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
 }
-video{
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 0px 10px 0px 10px;
-    border: solid black 0;
+.track-data img{
+    width: 170px;
+    border-radius: 5px;
+}
+.track-data h4 a{
+    color: black;
+    font-weight: lighter;
+}
+.agregarplaylist{
+    border: solid #F8F1F1;
+    color: #F8F1F1;
+    background-color: rgb(44, 38, 38);
+    border: double black;
+    padding: 4px;
+    margin-top: 15px;
 }
 .agregarplaylist:hover{
-    color: #F8F1F1;
-    background-color: antiquewhite;
-    border:double;
-    padding: 10px;
+    color: rgb(110, 26, 110)
+}
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+}
+.video video{
+    width: 500px;
+    border-radius: 5px;
 }
 
 /* detail-album */
@@ -277,11 +283,6 @@ video{
 }
 iframe{
     margin-bottom: 15px;
-}
-.agregarplaylist{
-    background-color: antiquewhite;
-    border:double;
-    padding: 10px;
 }
 
 
@@ -340,6 +341,10 @@ ul.genres{
     font-size: 30px;
     width: 25%;
     text-align: center;
+}
+.genres article ul li a{
+    color: black;
+    text-decoration:unset
 }
 
 /*Detail-genders*/
