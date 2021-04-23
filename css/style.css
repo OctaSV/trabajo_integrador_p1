@@ -155,6 +155,7 @@ footer a{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 50px;
 }
 .canciones{
     display: flex;
@@ -168,6 +169,8 @@ footer a{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 50px;
+    
 }
 .albums{
     display: flex;
@@ -182,7 +185,8 @@ footer a{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding-bottom: 20px;
+    margin-bottom: 50px;
+
 }
 .artistas{
     display: flex;
@@ -192,9 +196,11 @@ footer a{
 
 /*Colores Index*/
 span .titulos-index, .titulo-elementos, .texto-elementos{
-    color: rgb(131, 166, 231);
+    color: #246eb9ff;
     background-color: rgba(25, 0, 114, 0.81);
     border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /*detail-tracks */
@@ -228,15 +234,14 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     font-weight: lighter;
 }
 .agregarplaylist{
-    border: solid #F8F1F1;
-    color: #F8F1F1;
-    background-color: rgb(44, 38, 38);
+    color: black;
+    background-color: #F8F1F1;
     border: double black;
     padding: 4px;
     margin-top: 15px;
 }
 .agregarplaylist:hover{
-    color: rgb(110, 26, 110)
+    background-color: #246eb9ff;
 }
 .video{
     display: flex;
@@ -315,6 +320,9 @@ iframe{
     flex-direction: column;
     margin-left: 35px;
 }
+.da-tracks a{
+    color: black;
+}
 
 
 /* GENRES */
@@ -326,6 +334,7 @@ article.genres h1{
     width: 100%;
     font-size: 40px;
     text-align: center;
+    color: black;
 }
 article.genres{
     display: flex;
@@ -363,7 +372,7 @@ article.detail-genres{
 }
 .detail-genres h1{
     font-size: 40px;
-    color: white;
+    color: black;
     margin-left: 20px;
 }
 ul.detail-genres{
@@ -376,7 +385,7 @@ ul.detail-genres{
 }
 ul.detail-genres li{
     list-style-type: square;
-    color: white;
+    color: #246eb9ff;
 }
 .detail-genres img{
     width: 250px;
@@ -384,15 +393,40 @@ ul.detail-genres li{
 }
 
 /*PlayList*/
+.container-table{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .table{
     background-color: rgba(255, 0, 221, 0.5);
     border-radius: 10px;
-    margin-left: 80px;
     padding: 50px;
+    margin-right: 30px;
 }
-.h1playlist{
-    color: whitesmoke;
+tr{
+    text-align: left;
 }
+th{
+    border-bottom: 1px solid rgb(77, 6, 77);
+}
+.num{
+    width: 5%;
+    text-align: center;
+}
+.play{
+    width: 10%;
+    text-align: center;
+}
+.h1playlist, th, td a i{
+    color: #246eb9ff;
+    margin-left: 20px;
+}
+.play a i:hover{
+    color: black;
+}
+
 
 
 @media (max-width: 420px){
@@ -417,8 +451,6 @@ ul.detail-genres li{
     /*Header*/
     header{
         width: 100vw;
-        margin-bottom: 15vh;
-        background-image: color(#3f0052);
     }
     .logo{
         display: flex;
@@ -433,6 +465,7 @@ ul.detail-genres li{
     }
     nav{
         height: 10vh;
+        margin-bottom: 20px;
     }
     /*Footer*/
     footer{
@@ -440,7 +473,24 @@ ul.detail-genres li{
         width: 100vw;
     }
     /* detail tracks */
-
+    .container-track{
+        margin-top: 30vh;
+    }
+    .article-track{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .track-data{
+        width: 100vw;
+    }
+    .video{
+        width: 100vw;
+    }
+    .video video{
+        margin-top: 20px;
+        width: 230px;
+    }
     /* detail albums */
     .section-album{
         background-color: rgba(255, 0, 221, 0.72);
@@ -483,7 +533,6 @@ ul.detail-genres li{
         background-color: rgba(255, 0, 221, 0.72);
         margin-left: 3%;
         margin-right: 3%;
-        padding-left: 3%;
         margin-top: 100px;
     }
     ul.genres{
@@ -500,7 +549,6 @@ ul.detail-genres li{
     }
     .detail-genres h1{
         font-size: 35px;
-        color: white;
         margin-left: 20px;
     }
     ul.detail-genres{
@@ -512,14 +560,16 @@ ul.detail-genres li{
         justify-content: space-around;
     }
     /* playlists */
+    .container-table{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+    }
     .table{
-        background-color: rgba(255, 0, 221, 0.72);
-        border-radius: 10px;
-        margin: 0px 0px 0px 20px;
+        margin-right: 0px;
     }
     .h1playlist{
-        color: whitesmoke;
-        margin-top: 150px;
-        margin-left: 20px;
+        margin-top: 30vh;
     }
 }
