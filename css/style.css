@@ -17,18 +17,12 @@ a{
     text-decoration: none;
 }
 
-/* Estructura principal, Colores principales, Fuentes y Fondos Principales */
+/* Estructura principal, Fuentes principal y Fondo Principal */
 body{
-    background-image: url(../img/background/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(../img/background/back-ground.png);
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;   
     font-weight: lighter;
-}
-header a{
-    color: #F8F1F1;
-}
-footer a{
-    color: #F8F1F1;
 }
 
 /* cabecera */
@@ -36,34 +30,39 @@ header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
     height: 160px;
+    margin-bottom: 50px;
     background-image: linear-gradient(to bottom, #470044, #460047, #43004bf1, #42004eb2, #3f005200);
 }
 .logo{
+    width: 10%;
+}
+.logo a img{
     width: 100px;
-    margin-top: 5px;
-    margin-left: 30px;
 }
 #centroheader{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
 }
 nav{
-    width: 80%;
-    margin-left: 140px;
+    width: 100%;
+    height: 10%;
     font-weight: bold;
 }
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-around;
+}
+nav ul li{
+    text-align: center;
 }
 form{
-    width: 80%;
+    width: 100%;
     text-align: center;
-    margin: 20px 0px 0px 140px;
     color: rgb(214, 191, 191);
 }
 form input{
@@ -77,7 +76,9 @@ form button{
     border-radius: 5px;
     background-color: #F8F1F1;
 }
-
+header a{
+    color: #F8F1F1;
+}
 /*footer*/
 footer{
     display: flex;
@@ -112,11 +113,14 @@ footer{
 }
 .terms ul li i{
     margin-top: 10px;
-    color: whitesmoke;
+    color:  #F8F1F1;
 }
 .owners{
     width: 33.3%;
     text-align: center;
+    color: #F8F1F1;
+}
+footer a{
     color: #F8F1F1;
 }
 
@@ -393,7 +397,7 @@ ul.detail-genres li{
 
 @media (max-width: 420px){
     .titulos-index{
-        margin-top: 100px;
+        margin-top: 10vh;
     }
     .main-canciones{
         display: flex;
@@ -410,41 +414,33 @@ ul.detail-genres li{
         flex-direction: column;
         align-items: center;
     }
+    /*Header*/
     header{
+        width: 100vw;
+        margin-bottom: 15vh;
+        background-image: color(#3f0052);
+    }
+    .logo{
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        background-image: linear-gradient(to bottom, #470044, #460047, #43004bf1, #42004eb2, #3f005200);
+        width: 100vw;
+        justify-content: center;
+    }
+    .logo img{
+        align-items: center
     }
     #centroheader{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 80%;
-        align-content: center;
+        width: 100vw;
+    }
+    nav{
+        height: 10vh;
+    }
+    /*Footer*/
+    footer{
+        padding-top: 30vh;
+        width: 100vw;
     }
     /* detail tracks */
-    .article-track{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        width: 60%;
-        margin-top: 120px;
-        background-color: rgba(255, 0, 221, 0.72);
-    }
-    .track-data{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-    }
-    .video video{
-        width: 230px;
-        border-radius: 5px;
-    }
+
     /* detail albums */
     .section-album{
         background-color: rgba(255, 0, 221, 0.72);
@@ -525,15 +521,5 @@ ul.detail-genres li{
         color: whitesmoke;
         margin-top: 150px;
         margin-left: 20px;
-    }
-    footer{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        padding-top: 200px;
-        width: 100%;
-        justify-content: space-between;
-        background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
-        background-repeat: no-repeat;
     }
 }
