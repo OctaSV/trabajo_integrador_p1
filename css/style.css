@@ -282,10 +282,16 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 .album-data{
     text-align: start;
 }
+.album-data h2 a,h3 a{
+    color: black;
+}
 .album-songs{
     text-align: center;
     font-weight: bold;
     margin-left: 170px;
+}
+.album-songs ul li a{
+    color:black
 }
 iframe{
     margin-bottom: 15px;
