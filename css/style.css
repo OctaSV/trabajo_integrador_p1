@@ -321,6 +321,10 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 .da-tracks a{
     color: black;
 }
+.da-tracks-titulo{
+    color: black;
+    text-decoration: underline;
+}
 
 
 /* GENRES */
