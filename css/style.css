@@ -212,7 +212,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     border-radius: 5px;
     width: 60%;
     padding: 10px 0px 10px 0px;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
 }
 .track-data{
     display: flex;
@@ -260,7 +260,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     justify-content:center;
 }
 .section-album{
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     width: 90%;
     margin: 60px 60px 0px 60px;
     border-radius: 5px;
@@ -301,7 +301,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     display: flex;
     flex-direction: row;
     margin: 20px;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
 }
 .da-img{
     width: 400px;
@@ -344,7 +344,7 @@ article.genres{
     flex-wrap: wrap;
     width: 100%;
     border-radius: 5px;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     margin-left: 3%;
     margin-right: 3%;
     padding-left: 3%;
@@ -361,7 +361,7 @@ ul.genres{
 
 /*Detail-genders*/
 section.detail-genres{
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     margin-left: 3%;
     margin-right: 3%;
 }
@@ -402,7 +402,7 @@ ul.detail-genres li{
 }
 
 .table{
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     border-radius: 10px;
     padding: 50px;
     margin-right: 30px;
@@ -431,9 +431,14 @@ th{
 
 /*Resultados Búsqueda*/
 .resultado-container{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
 }
 .resultado-container h1{
+    width: 100%;
     color: #246eb9ff;
 }
 .article-resultado{
@@ -442,7 +447,7 @@ th{
 .article-noresultados{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     width: 100%;
     justify-content: center;
 }
@@ -453,20 +458,37 @@ th{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: rgba(255, 0, 221, 0.5);
+    background-color: rgba(255, 0, 221, 0.842);
     justify-content: center;
     width: 100%;
     margin-top: 10%;
+}
+.recomendado ul{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.recomendado ul li{
+    text-align: center;
+    width: 33.3%;
+}
+.recomendado ul li a{
+    color:black;
 }
 .recomendado h4{
     width: 100%;
     text-align: center;
 }
-.recomendado ul li{
-    text-align: center;
+.img-reco{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
-.recomendado ul li a{
-    color: black;
+.img-reco img{
+    width: 100px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 
@@ -615,6 +637,13 @@ th{
     }
     /*resultado de búsqueda*/
     .resultado-container h1{
-        margin-top: 30vh;
+        margin-top: 15vh;
+    }
+    .article-noresultados{
+        text-align: center;
+    }
+    .recomendado{
+        text-align: center;
+        font-size: 9px;
     }
 }
