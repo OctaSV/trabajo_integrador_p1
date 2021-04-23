@@ -465,6 +465,9 @@ th{
 .recomendado ul li{
     text-align: center;
 }
+.recomendado ul li a{
+    color: black;
+}
 
 
 @media (max-width: 420px){
