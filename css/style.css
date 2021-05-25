@@ -49,7 +49,7 @@ header{
 }
 nav{
     width: 100%;
-    height: 10px;
+    height: 0px;
     font-weight: bold;
 }
 nav ul{
@@ -166,15 +166,12 @@ footer a{
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
-    
 }
 .albums{
     display: flex;
     flex-direction: column;
     
 }
-
-
 /* ARTISTAS INDEX */
 .main-artistas{
     display: flex;
@@ -278,7 +275,8 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 .album-data{
     text-align: start;
 }
-.album-data h2 a,h3 a{
+.album-data h3, h3 a{
+    font-weight: lighter;
     color: black;
 }
 .album-songs{
@@ -287,7 +285,8 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     margin-left: 170px;
 }
 .album-songs ul li a{
-    color:black
+    color:black;
+    font-weight: lighter;
 }
 
 
@@ -311,7 +310,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 .da-nombre{
     font-size: 40px;
-    margin: 70px 0px 0px 0px;
+    margin-top: 70px;
 }
 .da-div-texto{
     display: flex;
@@ -493,6 +492,29 @@ th{
 
 
 @media (max-width: 420px){
+    /*Header*/
+    header{
+        width: 100vw;
+        height: 50vh;
+    }
+    .logo{
+        display: flex;
+        width: 100vw;
+        height: 20vh;
+        justify-content: center;
+    }
+    .logo a{
+        height: 20vh;
+    }
+    .logo a{
+        margin-bottom: -110px;
+    }
+    #centroheader{
+        width: 100vw;
+        height: 30vh;
+    }
+
+    /*Home*/
     .titulos-index{
         margin-top: 10vh;
     }
@@ -500,6 +522,7 @@ th{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10vh;
     }
     .main-albums{
         display: flex;
@@ -511,34 +534,12 @@ th{
         flex-direction: column;
         align-items: center;
     }
-    /*Header*/
-    header{
-        width: 100vw;
-    }
-    .logo{
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-    }
-    .logo img{
-        align-items: center
-    }
-    #centroheader{
-        width: 100vw;
-    }
-    nav{
-        height: 10vh;
-        margin-bottom: 20px;
-    }
     /*Footer*/
     footer{
         padding-top: 30vh;
         width: 100vw;
     }
     /* detail tracks */
-    .container-track{
-        margin-top: 30vh;
-    }
     .article-track{
         display: flex;
         flex-direction: column;
@@ -555,15 +556,15 @@ th{
         width: 230px;
     }
     /* detail albums */
+    .container-album{
+        align-items: center;
+    }
     .section-album{
-        background-color: rgba(255, 0, 221, 0.72);
-        width: 80%;
-        margin: 100px 35px 0px 35px;
-        border-radius: 5px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        width: 80vw;
     }
     .section-album article img{
         width: 300px;
@@ -572,13 +573,20 @@ th{
     .album-songs{
         margin-left: 0px;
     }
+
     /*detail artists*/
     .da-article{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 100px;
         background-color: rgba(255, 0, 221, 0.72);
+    }
+    .da-nombre{
+        margin-top: 0px;
+        text-align: center;
+    }
+    .da-div-texto{
+        margin: 0px;
     }
     .da-img{
         width: 300px;
@@ -591,12 +599,6 @@ th{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        border-radius: 5px;
-        background-color: rgba(255, 0, 221, 0.72);
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 100px;
     }
     ul.genres{
         font-size: 23px;
@@ -606,13 +608,11 @@ th{
     /* detail generos */
     section.detail-genres{
         background-color: rgba(255, 0, 221, 0.72);
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 100px;
     }
     .detail-genres h1{
+        margin: 0px;
         font-size: 35px;
-        margin-left: 20px;
+        text-align: center;
     }
     ul.detail-genres{
         font-size: 30px;
@@ -624,16 +624,11 @@ th{
     }
     /* playlists */
     .container-table{
-        display: flex;
         flex-direction: column;
-        width: 100vw;
         align-items: center;
     }
     .table{
         margin-right: 0px;
-    }
-    .h1playlist{
-        margin-top: 30vh;
     }
     /*resultado de búsqueda*/
     .resultado-container h1{
