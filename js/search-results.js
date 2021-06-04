@@ -3,5 +3,4 @@ window.addEventListener('load', function() {
     let busquedaobj = new URLSearchParams (busqueda); 
     busquedaobj.get('search');
     console.log(busquedaobj);
-
 }) 
