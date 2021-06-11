@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
                                                 <h4>${nombre_cancionurl}</h4>
                                                 <h4><a href="./detail-album.html">${nombre_albumurl}</a></h4>
                                                 <h4><a href="./detail-artist.html">${nombre_artistaurl}</a></h4>
-                                                <a href="playlist.html" class="agregarplaylist">Agregar a PLaylist</a>
+                                                <a href="" class="agregarplaylist">Agregar a Playlist</a>
                                         </div>
                                         <div class="reproductor-track">
                                                 <iframe src="${reproductor}" frameborder="0"></iframe>
@@ -34,6 +34,52 @@ window.addEventListener('load', function() {
         .catch(function(error){
                 console.log(error);
         })
+
+        
+        //Agregar gif a lista de favoritos.
+        let favoritos = [];
+
+        //Recuperar datos del storage
+        let recuperoStorage = localStorage.getItem('favoritos');
+
+        //Chequear y agregar la información de local storage en el array
+        if(recuperoStorage != null){
+        favoritos = JSON.parse(recuperoStorage);
+        }
+
+        //Chequear que el id esté en el array para cambiar el texto al usuario.
+        if(favoritos.includes(id)){
+        document.querySelector('.agregarplaylist').innerText = "Quitar de favoritos";
+        }
+
+        //Cuando el usuario haga click en "agregar a favoritos" Agregar id del gif dentro del array.
+        let fav = document.querySelector('.agregarplaylist');
+        console.log(fav);
+
+        fav.addEventListener("click", function(e){
+                e.preventDefault();
+                
+                //Chequear si el id está en el array
+                if(favoritos.includes(id)){
+                        let idASacar = favoritos.indexOf(id);
+                        favoritos.splice(idASacar, 1);
+                        document.querySelector('.agregarplaylist').innerText = "Agregar a favoritos";
+                } else {
+                        //Guardamos el id en el array
+                        favoritos.push(id);
+                        console.log(favoritos);
+                        document.querySelector('.agregarplaylist').innerText = "Quitar de favoritos";
+                }
+
+                //Armamos un string
+                let favParaStorage = JSON.stringify(favoritos);
+                //Lo guardamos dentro de localStorage
+                localStorage.setItem('favoritos', favParaStorage);
+                console.log(localStorage);
+
+        })
+        
+
 }) 
 
 
