@@ -245,7 +245,8 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     align-items: center;
 }
 .reproductor-track iframe{
-    border-radius: 20%;
+    border-radius: 20px;
+    margin-right: 15px;
 }
 
 /* detail-album */
