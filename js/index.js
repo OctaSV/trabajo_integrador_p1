@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
     
-    let url = 'https://api.giphy.com/v1/gifs/trending?api_key=PuhlljnIs04eW2ezoSHpJ6Fov6102e4T&limit=10&rating=g'
+    let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
+    
 
     fetch( url )
         .then( function(response){
