@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
         .then(function (data){
                 console.log(data);
 
-                let imagen_cancionurl = data.album.cover;
+                let imagen_cancionurl = data.album.cover_medium;
                 let nombre_cancionurl = data.title;
                 let nombre_albumurl = data.album.title;
                 let nombre_artistaurl = data.artist.name;
@@ -25,13 +25,13 @@ window.addEventListener('load', function() {
                                                 <div class="image-track">
                                                         <img src="${imagen_cancionurl}" alt="track-image">
                                                 </div>
-                                                <h4>${nombre_cancionurl}</h4>
-                                                <h4><a href="./detail-album.html">${nombre_albumurl}</a></h4>
-                                                <h4><a href="./detail-artist.html">${nombre_artistaurl}</a></h4>
+                                                <h4>Canción: ${nombre_cancionurl}</h4>
+                                                <h4><a href="./detail-album.html">Album: ${nombre_albumurl}</a></h4>
+                                                <h4><a href="./detail-artist.html">Artisa: ${nombre_artistaurl}</a></h4>
                                                 <button class="botonplaylist><a href="" class="agregarplaylist">Agregar a Playlist</a></button>
                                         </div>
                                         <div class="reproductor-track">
-                                                <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/3135556" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                                                <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
                                         </div>`
                                                 
         })
