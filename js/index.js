@@ -10,13 +10,18 @@ window.addEventListener('load', function () {
         .then(function (data) {
             //Aca muestro código
             console.log(data);
+
             let lista = document.querySelector('.main-canciones');
             let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
+
             for (let i = 0; i < 5; i++) {
+
+                let id = data.tracks.data[i].id;
                 let imagenCanciones = data.tracks.data[i].album.cover_big;
                 let tituloCanciones = data.tracks.data[i].title;
                 let nombreArtista = data.tracks.data[i].artist.name
-                contenidoLista += `<a href="./detail-track.html">
+
+                contenidoLista += `<a href="./detail-track.html?id=${id}">
                                         <article class="canciones">
                                             <div class="img-container">
                                                 <img class="index-img" src="${imagenCanciones}" alt="">

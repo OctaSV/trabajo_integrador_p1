@@ -3,7 +3,10 @@ window.addEventListener('load', function() {
         let queryString = location.search 
         let queryStringToObject = new URLSearchParams(queryString); 
         let id = queryStringToObject.get('id');
-        let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/1385946742'; 
+
+        let url_track = `https://api.deezer.com/track/${id}`;
+        let proxy = 'https://cors-anywhere.herokuapp.com/'; 
+        let url = proxy+url_track;
 
     fetch(url)
         .then(function (response){
@@ -16,7 +19,6 @@ window.addEventListener('load', function() {
                 let nombre_cancionurl = data.title;
                 let nombre_albumurl = data.album.title;
                 let nombre_artistaurl = data.artist.name;
-                //let reproductor = data.preview;
                 let track_data = document.querySelector('.article-track');
 
                 track_data.innerHTML = `<div class="track-data">
@@ -26,10 +28,10 @@ window.addEventListener('load', function() {
                                                 <h4>${nombre_cancionurl}</h4>
                                                 <h4><a href="./detail-album.html">${nombre_albumurl}</a></h4>
                                                 <h4><a href="./detail-artist.html">${nombre_artistaurl}</a></h4>
-                                                <a href="" class="agregarplaylist">Agregar a Playlist</a>
+                                                <button class="botonplaylist><a href="" class="agregarplaylist">Agregar a Playlist</a></button>
                                         </div>
                                         <div class="reproductor-track">
-                                        <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/3135556" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                                                <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/3135556" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
                                         </div>`
                                                 
         })
@@ -81,7 +83,7 @@ window.addEventListener('load', function() {
 
         })
         
-
+        
 }) 
 
 

@@ -226,14 +226,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     color: black;
     font-weight: lighter;
 }
-.agregarplaylist{
-    color: black;
-    background-color: #F8F1F1;
-    border: double black;
-    padding: 4px;
-    margin-top: 15px;
-}
-.agregarplaylist:hover{
+.botonplaylist:hover{
     background-color: #246eb9ff;
 }
 .reproductor-track{
