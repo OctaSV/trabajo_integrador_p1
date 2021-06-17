@@ -11,9 +11,11 @@ window.addEventListener('load', function() {
 
 
     //Opcional avisar al usuario que no hay gifs en su lista.
-    if(favoritos != ull){
-        alert('Añada una canción a favoritos');
-        window.location.src = "./index.html";
+    if(favoritos != null){
+        let confirmar = confirm('Añada una canción a favoritos');
+        if(confirmar == true){
+            window.location.src = "./index.html";
+        }
     }
     
     //Necesitamos recorrer el array de favoritos
