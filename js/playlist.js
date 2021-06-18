@@ -35,49 +35,19 @@ window.addEventListener('load', function() {
         })
         .then(function(data){
             //procesar
-            let tabla = document.querySelector('.contenido-tabla');
-            let resultados = '';
+            //let tabla = document.querySelector('.contenido-tabla');
+            //let resultados = '';
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
             let duracion_cancion =  data.duration;
 
-            lista.innerHTML += `<tr>
-                                    <th class="num">
-                                        #
-                                    </th>
-                                    <th>
-                                        TÍTULO
-                                    </th>
-                                    <th>
-                                        ALBUM
-                                    </th>
-                                    <th class="clock">
-                                        <i class="far fa-clock"></i>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td class="num">
-                                        1
-                                    </td>
-                                    <td class= "boton-play">
-                                            <a href=""><i class="fas fa-play"></i></a>
-                                    </td>
-                                    <td class="titulocancion">
-                                        ${nombre_cancion} - ${artista_cancion}
-                                    </td>
-                                    <td>
-                                        ${album_cancion}
-                                    </td>
-                                    <td class="duracion">
-                                        ${duracion_cancion}s
-                                    </td>
-                                </tr>
-                                <tr class="clean">
-                                    <td class="boton-clean">
-                                        <button>Quitar</button>
-                                    </td>
-                                </tr>`
+            //document.querySelector('num').innerText = `${data.data[i]+1}`
+            document.querySelector('.titulocancion').innerText = `${nombre_cancion} - ${artista_cancion}`
+            document.querySelector('.album-cancion').innetText = album_cancion
+            document.querySelector('.duracion').innetText = duracion_cancion
+
+            //lista.innerHTML += ``
 
         })
         .catch( function(e){
@@ -85,12 +55,14 @@ window.addEventListener('load', function() {
         })
     }
 
-    let num = document.querySelector('.num');
+    /*let num = document.querySelector('.num');
     let botonPlay = document.querySelector('.boton-play');
-    let bodyT = document.querySelector('.tbody')
+    let bodyT = document.querySelectorAll('.tbody')
+    console.log(bodyT);
     bodyT.addEventListener('mouseover', function(){
+        console.log('Hola');
         num.style.display = 'none';
         botonPlay.style.display = 'block';
-    })
+    })*/
 
 }) 

@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 
 
@@ -19,7 +18,7 @@ window.addEventListener('load', function () {
                 let id = data.tracks.data[i].id;
                 let imagenCanciones = data.tracks.data[i].album.cover_big;
                 let tituloCanciones = data.tracks.data[i].title;
-                let nombreArtista = data.tracks.data[i].artist.name
+                let nombreArtista = data.tracks.data[i].artist.name;
 
                 contenidoLista += `<a href="./detail-track.html?id=${id}">
                                         <article class="canciones">
@@ -39,6 +38,5 @@ window.addEventListener('load', function () {
         .catch(function (error) {
             console.log(error);
         })
-
 
 })
