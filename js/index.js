@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
         })
         .then(function (data) {
             //Aca muestro código
-            console.log(data);
+            console.log();
 
             let lista = document.querySelector('.main-albums');
             let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
@@ -58,7 +58,7 @@ window.addEventListener('load', function () {
                 let id = data.albums.data[i].id;
                 let imagenAlbums = data.albums.data[i].cover_big;
                 let tituloAlbums = data.albums.data[i].title;
-                let artistaAlbums = data.albums.data[i].name;
+                let artistaAlbums = data.albums.data[i].artist.name;
 
                 contenidoLista += `<a href="./detail-album.html">
                 <article class="albums">
@@ -97,12 +97,13 @@ window.addEventListener('load', function () {
 
             for (let i = 0; i < 5; i++) {
 
-                let id = data.albums.data[i].id;
+              //  let id = data.albums.data[i].id;
                 let imagenArtists = data.artists.data[i].picture_big;
                 let tituloArtists = data.artists.data[i].name;
+                let idArtista = data.artists.data[i].id
                
 
-                contenidoLista += `<a href="./detail-artist.html">
+                contenidoLista += `<a href="./detail-artist.html?id=${idArtista}">
                 <article class="artistas">
                     <div class="img-container">
                         <img class="index-img" src="${imagenArtists}" alt="">
