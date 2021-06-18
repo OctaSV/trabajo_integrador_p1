@@ -42,7 +42,7 @@ window.addEventListener('load', function() {
                         <h4 class="da-tracks-titulo">TOP 5 CANCIONES:</h4>
                     </li>
                     <li>
-                        <h4 class="da-tracks"><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/${id}/top_tracks" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></h4>
+                        <h4 class="da-tracks"><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/artist/${id}/top_tracks" width="86%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></h4>
                     </li>
                 
                 </ul>
