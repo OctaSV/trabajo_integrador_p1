@@ -338,7 +338,22 @@ article.genres{
     margin-right: 3%;
     padding-left: 3%;
 }
-ul.genres{
+ul.genres-1{
+    font-size: 30px;
+    width: 25%;
+    text-align: center;
+}
+ul.genres-2{
+    font-size: 30px;
+    width: 25%;
+    text-align: center;
+}
+ul.genres-3{
+    font-size: 30px;
+    width: 25%;
+    text-align: center;
+}
+ul.genres-4{
     font-size: 30px;
     width: 25%;
     text-align: center;
@@ -366,7 +381,7 @@ article.detail-genres{
     color: black;
     margin-left: 20px;
 }
-ul.detail-genres{
+ul.detailGenres{
     font-size: 50px;
     margin: 5%;
     display: flex;
@@ -374,11 +389,11 @@ ul.detail-genres{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-ul.detail-genres li{
+ul.detailGenres li{
     list-style-type: square;
     color: #246eb9ff;
 }
-.detail-genres img{
+.detailGenres img{
     width: 250px;
     height: 250px;
 }
