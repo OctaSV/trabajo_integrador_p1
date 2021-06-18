@@ -408,26 +408,30 @@ th{
     text-align: center;
 }
 .play{
-    width: 10%;
     text-align: center;
-}
-.h1playlist, th, td a i{
-    color: #246eb9ff;
-    margin-left: 20px;
 }
 .play a i:hover{
     color: black;
 }
-.clean{
-    display: flex;
-    justify-content: flex-end;
-    width: 2000%;
-    margin-top: 40px;
+.clock, .duracion{
+    text-align: center;
+}
+.h1playlist{
+    margin-left: 30px;
+    color: #246eb9ff;
+}
+th{
+    color: #246eb9ff;
+}
+.boton-play{
+    display: none;
 }
 .boton-clean{
-    text-align: end;
-    width: 10%;
+    text-align: center;
 }
+/*tbody{
+    background-color: rgba(145, 185, 36, 0.507);
+}*/
 
 /*Resultados Búsqueda*/
 .resultado-container{

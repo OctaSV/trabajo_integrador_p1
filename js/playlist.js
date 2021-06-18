@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     //Obtengo el array 
     let favoritos = JSON.parse(recuperoStorage);
     //destino de los datos en el html
-    let lista = document.querySelector('.titulocancion');
+    let lista = document.querySelector('.table');
 
 
     //Opcional avisar al usuario que no hay gifs en su lista.
@@ -37,11 +37,12 @@ window.addEventListener('load', function() {
             //procesar
             let tabla = document.querySelector('.contenido-tabla');
             let resultados = '';
-            for (let i = 0; i < 40; i++) {
-                let nombre_cancion = data.title;
-                let artista_cancion = data.artist.name;
-                let album_cancion = data.album.title;
-                resultados += `<tr>
+            let nombre_cancion = data.title;
+            let artista_cancion = data.artist.name;
+            let album_cancion = data.album.title;
+            let duracion_cancion =  data.duration;
+
+            lista.innerHTML += `<tr>
                                     <th class="num">
                                         #
                                     </th>
@@ -51,35 +52,45 @@ window.addEventListener('load', function() {
                                     <th>
                                         ALBUM
                                     </th>
-                                    <th class="play">
-                                        PLAY
+                                    <th class="clock">
+                                        <i class="far fa-clock"></i>
                                     </th>
                                 </tr>
                                 <tr>
                                     <td class="num">
                                         1
                                     </td>
+                                    <td class= "boton-play">
+                                            <a href=""><i class="fas fa-play"></i></a>
+                                    </td>
                                     <td class="titulocancion">
-                                        ${nombre_cancion}-${artista_cancion}
+                                        ${nombre_cancion} - ${artista_cancion}
                                     </td>
                                     <td>
                                         ${album_cancion}
                                     </td>
-                                    <td class="play">
-                                        <a href=""><i class="far fa-play-circle"></i></a>
+                                    <td class="duracion">
+                                        ${duracion_cancion}s
                                     </td>
                                 </tr>
                                 <tr class="clean">
                                     <td class="boton-clean">
-                                        <button>Limpiar</button>
+                                        <button>Quitar</button>
                                     </td>
                                 </tr>`
-            }
-            tabla.innerHTML += resultados
+
         })
         .catch( function(e){
             console.log(e);
         })
     }
+
+    let num = document.querySelector('.num');
+    let botonPlay = document.querySelector('.boton-play');
+    let bodyT = document.querySelector('.tbody')
+    bodyT.addEventListener('mouseover', function(){
+        num.style.display = 'none';
+        botonPlay.style.display = 'block';
+    })
 
 }) 
