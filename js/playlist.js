@@ -34,15 +34,15 @@ window.addEventListener('load', function() {
             return response.json();
         })
         .then(function(data){
+            console.log(data)
             //procesar
-            //let tabla = document.querySelector('.contenido-tabla');
-            //let resultados = '';
+            let resultados = '';
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
             let duracion_cancion =  data.duration;
 
-            //document.querySelector('num').innerText = `${data.data[i]+1}`
+            document.querySelector('num').innerText = i + 1
             document.querySelector('.titulocancion').innerText = `${nombre_cancion} - ${artista_cancion}`
             document.querySelector('.album-cancion').innetText = album_cancion
             document.querySelector('.duracion').innetText = duracion_cancion

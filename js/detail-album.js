@@ -22,6 +22,7 @@ fetch(url)
             let nombre_artistaurl = data.artist.name;
             let track_data = document.querySelector('.article-track');
 
+            document.querySelector('.album-image').innerHTML = `<img src="imagen_cancionurl" alt=""></img>` 
             track_data.innerHTML = ``
                                             
     })
