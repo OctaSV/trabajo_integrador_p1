@@ -686,3 +686,7 @@ th{
         font-size: 9px;
     }
 }
+
+.busquedaJs {
+    background-color: rgba(0, 0, 255, 0.418);
+}

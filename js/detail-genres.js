@@ -19,9 +19,10 @@ window.addEventListener('load', function () {
             for (let i = 0; i < data.data.length; i++) {
                 let nombreArtista = data.data[i].name;
                 let imagenArtista = data.data[i].picture_big;
-                let nombreGenero =  
+                let idArtista = data.data[i].id
+                //let nombreGenero =  CONSULTAR
 
-                contenidoLista += `<li><a href="./detail-artist.html"> ${nombreArtista} </a> </li><img src="${imagenArtista}" alt=""></img>`
+                contenidoLista += `<li><a href="./detail-artist.html?id=${idArtista}"> ${nombreArtista} </a> </li><img src="${imagenArtista}" alt=""></img>`
 
             }
             lista.innerHTML += contenidoLista
