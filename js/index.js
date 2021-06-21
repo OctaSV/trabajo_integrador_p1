@@ -93,7 +93,7 @@ window.addEventListener('load', function () {
         })
         .then(function (data) {
             //Aca muestro código
-            console.log(data);
+            //console.log(data);
 
             let lista = document.querySelector('.main-artistas');
             let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
