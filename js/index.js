@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
             let lista = document.querySelector('.main-albums');
             let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i<5; i++) {
 
                 let idAlbum = data.albums.data[i].id;
                 let imagenAlbums = data.albums.data[i].cover_big;
