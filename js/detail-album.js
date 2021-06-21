@@ -35,7 +35,7 @@ fetch(url)
                 <article class="album-songs">
                 <h2>Canciones Álbum</h2>
                 <ul>
-                <li><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${id}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></li>
+                <li><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${id}" width="650" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></li>
                 </ul>
                 <img src="${imagenAlbum}" alt="">
                 </section>`
