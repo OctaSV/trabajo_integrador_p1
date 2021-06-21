@@ -12,76 +12,76 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <title>Detalle de Canciones</title>
     </head>
-    <!--GIfLoad
-    <div class="gif"><iframe src="https://giphy.com/embed/cnzP4cmBsiOrccg20V" width="200%" height="25%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-    <body class="body-track">-->
-        <!-- header -->
-        <header>
-            <div class="logo">
-                <a href="./index.html"><img src="./img/logos-turnedup.png" alt="logo"></a>
+    <body class="body-track">
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logos-turnedup.png" alt="logo"></a>
+        </div>
+        <div id="centroheader">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./genres.html">Géneros</a></li>
+                    <li><a href="./playlist.html">Playlist</a></li>
+                </ul>
+            </nav>
+            <form action="./search-results.html" class="barrabusqueda">
+                <input type="text" name="search" value="" placeholder="Canciones, artistas, albums...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <!--GIfLoad  -->
+    <div class="gif"><iframe src="https://giphy.com/embed/LpACcI92qjUkkoT2Sh" width="40%" height="40%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <!--Container-->
+    <container class="container-track">
+        <article class="article-track">
+            <div class="track-data">
+                <h4 class="cancion"></h4>
+                <h4 class="album"></h4>
+                <h4 class="artista"></h4>
+                <button class="agregarplaylist">Agregar a Playlist</button>
             </div>
-            <div id="centroheader">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./genres.html">Géneros</a></li>
-                        <li><a href="./playlist.html">Playlist</a></li>
-                    </ul>
-                </nav>
-                <form action="./search-results.html" class="barrabusqueda">
-                    <input type="text" name="search" value="" placeholder="Canciones, artistas, albums...">
-                    <button type="submit">Buscar</button>
-                </form>
-            </div>
-        </header>
-        <!--body-->
-        <container class="container-track">
-            <article class="article-track">
-                `<div class="track-data">
-                    <h4 class="cancion"></h4>
-                    <h4 class="album"></h4>
-                    <h4 class="artista"></h4>
-                    <button class="agregarplaylist">Agregar a Playlist</button>
-                </div>
-                <div class="reproductor-track"></div>
+            <div class="reproductor-track"></div>
+        </article>
+    </container>
+    <!--footer-->
+    <footer>
+        <section class="contact">
+            <h4 class=""><strong>Contact</strong></h4>
+            <article class="contentcontact">
+                <ul>
+                    <li>
+                        <a href="osonciniviola@udesa.edu.ar">Email</a>
+                        <i class="fas fa-envelope-square"></i>
+                    </li>
+                    <li>
+                        <a href="2964-445566">Cellphone</a>
+                        <i class="fas fa-mobile-alt"></i>
+                    </li>
+                </ul>
             </article>
-        </container>
-        <!--footer-->
-        <footer>
-            <section class="contact">
-                <h4 class=""><strong>Contact</strong></h4>
-                <article class="contentcontact">
-                    <ul>
-                        <li>
-                            <a href="osonciniviola@udesa.edu.ar">Email</a>
-                            <i class="fas fa-envelope-square"></i>
-                        </li>
-                        <li>
-                            <a href="2964-445566">Cellphone</a>
-                            <i class="fas fa-mobile-alt"></i>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-            <section class="terms">
-                <ul>
-                    <li>
+        </section>
+        <section class="terms">
+            <ul>
+                <li>
                         <a href="">Privacy & Legal</a>
-                    </li>
-                    <li>
+                </li>
+                <li>
                         <i class="fab fa-slack"></i>
-                    </li>
-                </ul>
-            </section>
-            <section class="owners">
-                <h4>Owners <i class="fas fa-users"></i></h4>
-                <ul>
-                    <li>Octavio Soncini</li>
-                    <li>Julian Araujo</li>
-                    <li>Nicolas Tufró</li>
-                </ul>
-            </section>
-        </footer>
-        <script src="./js/detail-track.js"></script>
+                </li>
+            </ul>
+        </section>
+        <section class="owners">
+            <h4>Owners <i class="fas fa-users"></i></h4>
+            <ul>
+                <li>Octavio Soncini</li>
+                <li>Julian Araujo</li>
+                <li>Nicolas Tufró</li>
+            </ul>
+        </section>
+    </footer>
+    <script src="./js/detail-track.js"></script>
 </body>
 </html>

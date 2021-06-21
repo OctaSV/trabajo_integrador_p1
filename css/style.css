@@ -19,11 +19,11 @@ a{
 
 /*GIF*/
 .gif{
-    display: none;
+    display: flex;
     height: 60%;
     width: 100%;
     justify-content: center;
-    background-color: black;
+
 }
 
 /* Estructura principal, Fuentes principal y Fondo Principal */
@@ -89,7 +89,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-top: 160px;
+    padding-top: 120px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
@@ -207,6 +207,11 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 
 /*Detail-tracks */
+.body-track{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .container-track{
     display: flex;
     width: 100%;

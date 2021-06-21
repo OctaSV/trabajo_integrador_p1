@@ -37,17 +37,56 @@ window.addEventListener('load', function() {
             console.log(data)
             //procesar
             let resultados = '';
+            let idCancion = data.id;
+            let idAlbum =  data.album.id;
+            let idArtista = data.artist.id;
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
             let duracion_cancion =  data.duration;
 
-            document.querySelector('num').innerText = i + 1
-            document.querySelector('.titulocancion').innerText = `${nombre_cancion} - ${artista_cancion}`
-            document.querySelector('.album-cancion').innetText = album_cancion
+            document.querySelector('num').innerText = '1';
+            document.querySelector('.titulocancion').innerHTML = `<a href="./detail-album.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-album.html?id=${idArtista}>${artista_cancion}</a>`
+            document.querySelector('.album-cancion').innerHTML = `<a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>`
             document.querySelector('.duracion').innetText = duracion_cancion
 
-            //lista.innerHTML += ``
+            /*lista.innerHTML += 
+        `<tr>
+                <th class="numT">
+                #
+            </th>
+            <th>
+                TÍTULO
+            </th>
+            <th>
+                ALBUM
+            </th>
+            <th class="clock">
+                <i class="far fa-clock"></i>
+            </th>
+        </tr>
+        <tr>
+            <td class="num">
+               1
+            </td>
+            <td class= "boton-play">
+                    <a href=""><i class="fas fa-play"></i></a>
+            </td>
+            <td class="titulocancion">
+                <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-artist.html?id=${idArtista}>${artista_cancion}</a>
+            </td>
+            <td class="album-cancion">
+                <a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>
+            </td>
+            <td class="duracion">
+                ${duracion_cancion}
+            </td>
+        </tr>
+        <tr class="clean">
+            <td class="boton-clean">
+                <button>Quitar</button>
+            </td>
+        </tr>`*/
 
         })
         .catch( function(e){
