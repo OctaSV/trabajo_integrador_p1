@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
         </tr>
         <tr class="clean">
             <td class="boton-clean">
-                <button>Quitar</button>
+                <button class="quitar">Quitar</button>
             </td>
         </tr>`*/
 
@@ -93,6 +93,10 @@ window.addEventListener('load', function() {
             console.log(e);
         })
     }
+
+    
+    /*Boton PLayer*/
+
 
     /*let num = document.querySelector('.num');
     let botonPlay = document.querySelector('.boton-play');
@@ -103,5 +107,15 @@ window.addEventListener('load', function() {
         num.style.display = 'none';
         botonPlay.style.display = 'block';
     })*/
+ 
 
+    /*Boton Quitar*/
+
+    /*let quitar = document.querySelector('quitar');
+    quitar.addEventListener('click', function(){
+        if(favoritos = null){
+            alert('No hay para borrar')
+        } else(favoritos != null)
+            favoritos = ''
+    })*/
 }) 
