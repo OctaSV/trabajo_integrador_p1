@@ -1,5 +1,9 @@
-window.addEventListener('load', function() {
+let cargarPag = window.addEventListener('load', function() {
         
+        let gifLoading = document.querySelector('.gif');
+        gifLoading.style.display = 'none';
+
+
         let queryString = location.search 
         let queryStringToObject = new URLSearchParams(queryString); 
         let id = queryStringToObject.get('id');
@@ -14,19 +18,17 @@ window.addEventListener('load', function() {
             })
             .then(function (data){
                     console.log(data);
-        
-                    let imagen_cancionurl = data.album.cover_medium;
+
+                    let AlbumID = data.album.id;
+                    let ArtistID = data.artist.id;
                     let nombre_cancionurl = data.title;
-                    let duracion_cancion = data.duration;
                     let nombre_albumurl = data.album.title;
                     let nombre_artistaurl = data.artist.name;
  
-                    document.querySelector('.image-track').innerHTML = `<img src="${imagen_cancionurl}" alt="track-image">`;
-                    document.querySelector('.cancion').innerHTML = `Canción: ${nombre_cancionurl}`;
-                    document.querySelector('.duracion').innerHTML = `${duracion_cancion} Segundos`;
-                    document.querySelector('.album').innerHTML = `<a href="./detail-album.html">Album: ${nombre_albumurl}</a>`;
-                    document.querySelector('.artista').innerHTML = `<a href="./detail-artist.html">Artista: ${nombre_artistaurl}</a>`;
-                    document.querySelector('.reproductor-track').innerHTML = `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`;   
+                    document.querySelector('.cancion').innerHTML = `${nombre_cancionurl}`;
+                    document.querySelector('.album').innerHTML = `<a href="./detail-album.html?id=${AlbumID}">Album: ${nombre_albumurl}</a>`;
+                    document.querySelector('.artista').innerHTML = `<a href="./detail-artist.html?id=${ArtistID}">Artista: ${nombre_artistaurl}</a>`;
+                    document.querySelector('.reproductor-track').innerHTML = `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write" class="iframe"></iframe>`;   
             })
             .catch(function(error){
                     console.log(error);

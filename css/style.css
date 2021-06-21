@@ -17,6 +17,15 @@ a{
     text-decoration: none;
 }
 
+/*GIF*/
+.gif{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+
+}
+
 /* Estructura principal, Fuentes principal y Fondo Principal */
 body{
     background-image: url(../img/background/back-ground.png);
@@ -80,7 +89,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-top: 200px;
+    padding-top: 120px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
@@ -119,6 +128,7 @@ footer{
 footer a{
     color: #F8F1F1;
 }
+
 
 /* IMG INDEX */
 .index-img{
@@ -197,6 +207,11 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 
 /*Detail-tracks */
+.body-track{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .container-track{
     display: flex;
     width: 100%;
@@ -204,8 +219,6 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 .article-track{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     border-radius: 5px;
     width: 50%;
     padding: 10px 0px 10px 0px;
@@ -216,22 +229,22 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-}
-.track-data img{
-    width: 170px;
-    border-radius: 5px;
+    width: 50%;
+    justify-content: space-evenly;
 }
 .track-data h4 a{
     color: black;
     font-weight: lighter;
+}
+.track-data h4{
+    font-size: 20px;
 }
 .reproductor-track{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    width: 60%;
+    width: 50%;
     align-items: center;
 }
 .reproductor-track iframe{
@@ -264,6 +277,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 .album-data{
     text-align: start;
+    margin-left: 40px;
 }
 .album-data h3, h3 a{
     font-weight: lighter;
@@ -291,21 +305,25 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     flex-direction: row;
     margin: 20px;
     background-color: rgba(255, 0, 221, 0.842);
+    
 }
 .da-img{
     width: 400px;
     height: 400px;
     border-radius: 95%;
     margin: 20px;
+    margin-top: 55.5px;
 }
 .da-nombre{
-    font-size: 40px;
-    margin-top: 70px;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 .da-div-texto{
     display: flex;
     flex-direction: column;
-    margin-left: 35px;
+    margin-left: 20px;
+    width: 100%;
 }
 .da-tracks a{
     color: black;
@@ -313,6 +331,8 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 .da-tracks-titulo{
     color: black;
     text-decoration: underline;
+    font-size: 25px;
+    margin-top: 0px;
 }
 
 
@@ -418,7 +438,7 @@ tr{
 th{
     border-bottom: 1px solid rgb(77, 6, 77);
 }
-.num{
+.numT{
     width: 5%;
     text-align: center;
 }

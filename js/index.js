@@ -1,5 +1,8 @@
 window.addEventListener('load', function () {
 
+    let gifLoading = document.querySelector('.gif');
+    gifLoading.style.display = 'none';
+
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 
 
@@ -19,7 +22,7 @@ window.addEventListener('load', function () {
                 let id = data.tracks.data[i].id;
                 let imagenCanciones = data.tracks.data[i].album.cover_big;
                 let tituloCanciones = data.tracks.data[i].title;
-                let nombreArtista = data.tracks.data[i].artist.name
+                let nombreArtista = data.tracks.data[i].artist.name;
 
                 contenidoLista += `<a href="./detail-track.html?id=${id}">
                                         <article class="canciones">
@@ -53,14 +56,14 @@ window.addEventListener('load', function () {
             let lista = document.querySelector('.main-albums');
             let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i<5; i++) {
 
-                let id = data.albums.data[i].id;
+                let idAlbum = data.albums.data[i].id;
                 let imagenAlbums = data.albums.data[i].cover_big;
                 let tituloAlbums = data.albums.data[i].title;
                 let artistaAlbums = data.albums.data[i].artist.name;
 
-                contenidoLista += `<a href="./detail-album.html">
+                contenidoLista += `<a href="./detail-album.html?id=${idAlbum}">
                 <article class="albums">
                     <div class="img-container">
                         <img class="index-img" src="${imagenAlbums}" alt="">

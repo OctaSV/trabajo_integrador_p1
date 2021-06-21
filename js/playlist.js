@@ -34,50 +34,59 @@ window.addEventListener('load', function() {
             return response.json();
         })
         .then(function(data){
+            console.log(data)
             //procesar
-            let tabla = document.querySelector('.contenido-tabla');
             let resultados = '';
+            let idCancion = data.id;
+            let idAlbum =  data.album.id;
+            let idArtista = data.artist.id;
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
             let duracion_cancion =  data.duration;
 
-            lista.innerHTML += `<tr>
-                                    <th class="num">
-                                        #
-                                    </th>
-                                    <th>
-                                        TÍTULO
-                                    </th>
-                                    <th>
-                                        ALBUM
-                                    </th>
-                                    <th class="clock">
-                                        <i class="far fa-clock"></i>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td class="num">
-                                        1
-                                    </td>
-                                    <td class= "boton-play">
-                                            <a href=""><i class="fas fa-play"></i></a>
-                                    </td>
-                                    <td class="titulocancion">
-                                        ${nombre_cancion} - ${artista_cancion}
-                                    </td>
-                                    <td>
-                                        ${album_cancion}
-                                    </td>
-                                    <td class="duracion">
-                                        ${duracion_cancion}s
-                                    </td>
-                                </tr>
-                                <tr class="clean">
-                                    <td class="boton-clean">
-                                        <button>Quitar</button>
-                                    </td>
-                                </tr>`
+            document.querySelector('num').innerText = '1';
+            document.querySelector('.titulocancion').innerHTML = `<a href="./detail-album.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-album.html?id=${idArtista}>${artista_cancion}</a>`
+            document.querySelector('.album-cancion').innerHTML = `<a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>`
+            document.querySelector('.duracion').innetText = duracion_cancion
+
+            /*lista.innerHTML += 
+        `<tr>
+                <th class="numT">
+                #
+            </th>
+            <th>
+                TÍTULO
+            </th>
+            <th>
+                ALBUM
+            </th>
+            <th class="clock">
+                <i class="far fa-clock"></i>
+            </th>
+        </tr>
+        <tr>
+            <td class="num">
+               1
+            </td>
+            <td class= "boton-play">
+                    <a href=""><i class="fas fa-play"></i></a>
+            </td>
+            <td class="titulocancion">
+                <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-artist.html?id=${idArtista}>${artista_cancion}</a>
+            </td>
+            <td class="album-cancion">
+                <a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>
+            </td>
+            <td class="duracion">
+                ${duracion_cancion}
+            </td>
+        </tr>
+        <tr class="clean">
+            <td class="boton-clean">
+                <button>Quitar</button>
+            </td>
+        </tr>`*/
 
         })
         .catch( function(e){
@@ -85,12 +94,14 @@ window.addEventListener('load', function() {
         })
     }
 
-    let num = document.querySelector('.num');
+    /*let num = document.querySelector('.num');
     let botonPlay = document.querySelector('.boton-play');
-    let bodyT = document.querySelector('.tbody')
+    let bodyT = document.querySelectorAll('.tbody')
+    console.log(bodyT);
     bodyT.addEventListener('mouseover', function(){
+        console.log('Hola');
         num.style.display = 'none';
         botonPlay.style.display = 'block';
-    })
+    })*/
 
 }) 
