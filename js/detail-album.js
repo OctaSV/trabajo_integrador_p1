@@ -17,21 +17,20 @@ fetch(url)
 
             let listaDetalleAlbums = document.querySelector('.album-image');
             let contenidoDetalleAlbums = '';
-            let imagenAlbum = data.artist.pictre_big
-            let nombreAlbum = data.title
-            let nombreArtistaAlbum = data.artist.name
-            let generoAlbum = data.genres.data[0].name
-            let fechaPublicacion = data.release_date
-
-            let idArtista = data.artist.id
-            
+            let imagenAlbum = data.artist.pictre_big;
+            let nombreAlbum = data.title;
+            let nombreArtistaAlbum = data.artist.name;
+            let generoAlbum = data.genres.data[0].name;
+            let fechaPublicacion = data.release_date;
+            let idArtista = data.artist.id;
+            let idGenero = data.genres.data[0].id;
   
                 
                 contenidoDetalleAlbums += `<section class="section-album">
                 <article class="album-data">
                 <h2>Album: ${nombreAlbum}</h2>
                 <h3><a href="./detail-artist.html?id=${idArtista}">Artista: ${nombreArtistaAlbum}</a></h2>
-                <h3><a href="./detail-genres.html?id=${id}">Genero: ${generoAlbum}</a></h3>
+                <h3><a href="./detail-genres.html?id=${idGenero}">Genero: ${generoAlbum}</a></h3>
                 <h3>Publicado en: ${fechaPublicacion}</h3>
                 </article>
                 <article class="album-songs">
