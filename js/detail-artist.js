@@ -6,16 +6,15 @@ window.addEventListener('load', function() {
         
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
+    //console.log(id)
     
   
-    console.log(id)
 
     fetch(url)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        //Aca muestro código
         console.log(data);
         
         
