@@ -1,12 +1,12 @@
 window.addEventListener('load', function() {
     let queryString = location.search //Caputramso qs
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
-    let aBuscar = queryStringToObject.get('milanesa'); //Acá va el name del campo input del formulario.
+    let aBuscar = queryStringToObject.get('search'); //Acá va el name del campo input del formulario.
     
-    let datoBuscado = document.querySelector('.datoBuscado');
+    let datoBuscado = document.querySelector('.busqueda');
     datoBuscado.innerText = aBuscar;
     
-    let url = `https://api.giphy.com/v1/gifs/search?api_key=PuhlljnIs04eW2ezoSHpJ6Fov6102e4T&q=${aBuscar}&limit=25&offset=0&rating=g&lang=en`
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${aBuscar}`
     
     fetch( url )
         .then( function(response){
@@ -15,17 +15,21 @@ window.addEventListener('load', function() {
         .then( function(data){
             //Aca muestro código
             console.log(data);
-            let info = data.data;
-            let section = document.querySelector('.lista');
-            let resultados = '';
+            let lista = document.querySelector('.resultado');
+            let contenidoLista = '';
     
-            for(let i=0; i<info.length; i++){
-                resultados+= `<article>
-                                <h2>${info[i].title}</h2>
-                                <img src="${info[i].images.original.url}">
-                            </article>`
+            for(let i=0; i<data.data.length; i++){
+                let artista = data.data[i].artist.name
+                let album = data.data[i].album.title
+                let cancion = data.data[i].title
+                
+                contenidoLista += `<li class="busquedaJs">
+                                <h5>Cancion : </h5>${cancion}                       
+                                <h5>Album : </h5>${album}                           
+                                <h5>Artista : </h5>${artista}
+                            </li>`
             }
-            section.innerHTML += resultados
+            lista.innerHTML += contenidoLista
             
     
         })
