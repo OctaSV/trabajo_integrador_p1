@@ -84,6 +84,14 @@ form button{
 header a{
     color: #F8F1F1;
 }
+.alertIcon{
+    display: none;
+    margin: 0px;
+}
+.alert, .alertIcon {
+    color: red;
+}
+
 /*footer*/
 footer{
     display: flex;

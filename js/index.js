@@ -125,4 +125,27 @@ window.addEventListener('load', function () {
         .catch(function (error) {
             console.log(error);
         })
+
+
+
+    //Validando Formulario
+    let formulario = document.querySelector('form');
+    let campoBuscar = document.querySelector('[name="search"]');
+    let alert = document.querySelector('.alert');
+    let alertIcon = document.querySelector('.alertIcon');
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(campoBuscar.value == ""){
+            alert.innerText = 'El campo no puede estar vacío';
+            alertIcon.style.display = 'inline'            
+        } else if( campoBuscar.value.length < 3){
+            alert.innerText = 'Por favor ingrese más de 3 caracteres';
+            alertIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
+
 })
