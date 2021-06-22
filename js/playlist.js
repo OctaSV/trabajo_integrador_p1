@@ -1,7 +1,5 @@
 window.addEventListener('load', function() {
 
-    //Lista de gifs favoritos
-
     //Recupero el storage.
     let recuperoStorage = localStorage.getItem('favoritos');
     //Obtengo el array 
@@ -12,10 +10,8 @@ window.addEventListener('load', function() {
 
     //Avisar al usuario que no hay canciones en su lista.
     if(recuperoStorage == undefined || favoritos.length == 0){
-        let confirmar = confirm('Añada una canción a favoritos');
-        if(confirmar == true){
-            window.location.src = './index.html';
-        }
+
+
     } else{
         //Necesitamos recorrer el array de favoritos
         for (let i=0; i<favoritos.length; i++){
@@ -45,45 +41,26 @@ window.addEventListener('load', function() {
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
+            let player = data.preview
             let duracion_cancion =  data.duration;
 
-            lista.innerHTML += 
-        `<tr>
-            <th class="numT">
-                #
-            </th>
-            <th>
-                TÍTULO
-            </th>
-            <th>
-                ALBUM
-            </th>
-            <th class="clock">
-                <i class="far fa-clock"></i>
-            </th>
-        </tr>
-        <tr>
-            <td class="num">
-              #
-            </td>
-            <td class= "boton-play">
-                <a href=""><i class="fas fa-play"></i></a>
-            </td>
-            <td class="titulocancion">
-                <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a href=".detail-artist.html?id=${idArtista}">${artista_cancion}</a>
-            </td>
-            <td class="album-cancion">
-                <a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>
-            </td>
-            <td class="duracion">
-                ${duracion_cancion}
-            </td>
-        </tr>
-        <tr class="clean">
-            <td class="boton-clean">
-                <button class="quitar">Quitar</button>
-            </td>
-        </tr>`
+            lista.innerHTML += `<tr>
+                                    <td class="num">
+                                    #
+                                    </td>
+                                    <td class="titulocancion">
+                                        <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a href=".detail-artist.html?id=${idArtista}">${artista_cancion}</a>
+                                    </td>
+                                    <td class="album-cancion">
+                                        <a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>
+                                    </td>
+                                    <td class="player">
+                                        <a href="./detail-track.html?id=${idCancion}"><i class="fas fa-play playerHoover"></i></a>
+                                    </td>
+                                    <td class="duracion">
+                                        ${duracion_cancion}sg
+                                    </td>
+                                </tr>`
         
         })
         .catch( function(e){
@@ -91,12 +68,13 @@ window.addEventListener('load', function() {
         })
     }
     
+    
     //Validando Formulario
     let formulario = document.querySelector('form');
     let campoBuscar = document.querySelector('[name="search"]');
     let alert = document.querySelector('.alert');
     let alertIcon = document.querySelector('.alertIcon');
-
+    
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
         if(campoBuscar.value == ""){
@@ -108,9 +86,7 @@ window.addEventListener('load', function() {
         } else {
             this.submit();
         }
-    })
-
-    
+        })
     /*Boton PLayer
 
 

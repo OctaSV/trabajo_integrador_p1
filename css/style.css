@@ -86,6 +86,7 @@ header a{
     color: #F8F1F1;
 }
 .alert{
+    margin-right: 55px;
     font-size: 10px;
 }
 .alertIcon{
@@ -140,8 +141,9 @@ footer{
 footer a{
     color: #F8F1F1;
 }
-
-
+.fplaylist{
+    margin-top: 155px;
+}
 /* IMG INDEX */
 .index-img{
     width: 300px;
@@ -447,25 +449,32 @@ ul.detailGenres li{
     margin-right: 30px;
     padding-bottom: 30px;
 }
-tr{
+tr, tr td, tr td a{
     text-align: left;
+    color: black;
 }
 th{
     border-bottom: 1px solid rgb(77, 6, 77);
     color: #246eb9ff;
 }
-.numT, .num{
+.num, .clock, .duracion{
     width: 5%;
     text-align: center;
 }
-.play{
+.albumPlaylist{
+    width: 40%;
+}
+.playerHoover:hover{
+    color: #246eb9ff;
+}
+.lyric, .player{
     text-align: center;
 }
-.play a i:hover, td a{
-    color: black;
+.lyric{
+    width: 10%;
 }
-.clock, .duracion{
-    text-align: center;
+.clock{
+    width: 5%;
 }
 .h1playlist{
     margin-left: 30px;
