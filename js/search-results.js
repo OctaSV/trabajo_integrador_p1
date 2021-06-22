@@ -50,4 +50,60 @@ window.addEventListener('load', function() {
         .catch( function(error){
             console.log(error);
         })
-});
+
+
+    // recomendados
+   
+    let queryStringB = location.search 
+    let queryStringToObjectB = new URLSearchParams(queryStringB); 
+    let id = queryStringToObjectB.get('id');
+
+   
+    
+
+    let urlRecomendados = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart`
+
+        fetch( urlRecomendados )
+            .then( function(response){
+            return response.json();
+        })
+            .then( function(data){
+               
+                console.log(data);
+                let listaResultados = document.querySelector('.recomendado');
+                let contenidoListaResultados = '';
+
+                let cancionRecomendada = data.tracks.data[0].title;
+                let imagenCancionRecomendada = data.tracks.data[0].album.cover_big;
+
+                let albumRecomendado = data.albums.data[0].title;
+                let imagenAlbumRecomendado = data.albums.data[0].cover_big;
+                
+                let artistaRecomendado = data.artists.data[0].name;
+                let imagenArtistaRecomendao = data.artists.data[0].picture_big;
+                
+                      
+            
+
+                contenidoListaResultados += `<h4>Recomendados</h4>
+                <ul>
+                    <li>
+                        <a href="./detail-track.html">Canción: ${cancionRecomendada}</a>
+                    </li>
+                    <li>
+                        <a href="./detail-album.html">Album: ${albumRecomendado}</a>
+                    </li>
+                    <li>
+                        <a href="./detail-artist.html">Artista: ${artistaRecomendado}</a>
+                    </li>
+                </ul>
+                <div class="img-reco">
+                    <a href="./detail-track.html"><img src="${imagenCancionRecomendada}" alt=""></a>
+                    <a href="./detail-album.html"><img src="${imagenAlbumRecomendado}" alt=""></a>
+                    <a href="./detail-artist.html"><img src="${imagenArtistaRecomendao}" alt=""></a>
+                </div>`
+
+                listaResultados.innerHTML += contenidoListaResultados
+                
+            })
+})
