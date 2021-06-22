@@ -99,8 +99,10 @@ window.addEventListener('load', function() {
                 let artistaRecomendado = data.artists.data[0].name;
                 let imagenArtistaRecomendao = data.artists.data[0].picture_big;
                 
-                      
-            
+                let cancionB = data.tracks.data[0].id;
+                let albumB = data.albums.data[0].id;
+                let artistaB = data.artists.data[0].id;
+                
 
                 contenidoListaResultados += `<h4>Recomendados</h4>
                 <ul>
@@ -115,9 +117,9 @@ window.addEventListener('load', function() {
                     </li>
                 </ul>
                 <div class="img-reco">
-                    <a href="./detail-track.html"><img src="${imagenCancionRecomendada}" alt=""></a>
-                    <a href="./detail-album.html"><img src="${imagenAlbumRecomendado}" alt=""></a>
-                    <a href="./detail-artist.html"><img src="${imagenArtistaRecomendao}" alt=""></a>
+                    <a href="./detail-track.html?id=${cancionB}"><img src="${imagenCancionRecomendada}" alt=""></a>
+                    <a href="./detail-album.html?id=${albumB}"><img src="${imagenAlbumRecomendado}" alt=""></a>
+                    <a href="./detail-artist.html?id=${artistaB}"><img src="${imagenArtistaRecomendao}" alt=""></a>
                 </div>`
 
                 listaResultados.innerHTML += contenidoListaResultados
