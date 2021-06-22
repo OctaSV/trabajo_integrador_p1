@@ -26,18 +26,21 @@
                     <li><a href="./playlist.html">Playlist</a></li>
                 </ul>
             </nav>
-            <form action="./search-results.html" class="barrabusqueda">
+            <form action="./search-results.html" class="barrabusqueda" method="GET">
                 <input type="text" name="search" value="" placeholder="Canciones, artistas, albums...">
+                <i class="fas fa-exclamation alertIcon"></i>
                 <button type="submit">Buscar</button>
+                <p class="alert"></p>
             </form>
         </div>
     </header>
     <!--GIfLoad  -->
-    <div class="gif"><iframe src="https://giphy.com/embed/LpACcI92qjUkkoT2Sh" width="40%" height="40%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+    <div class="gif"><iframe src="https://giphy.com/embed/LpACcI92qjUkkoT2Sh" width="46%" height="46%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
     <!--Container-->
     <container class="container-track">
         <article class="article-track">
             <div class="track-data">
+                <div class="image-track"></div>
                 <h4 class="cancion"></h4>
                 <h4 class="album"></h4>
                 <h4 class="artista"></h4>

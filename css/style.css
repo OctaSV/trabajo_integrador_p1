@@ -69,6 +69,7 @@ nav ul{
 form{
     width: 100%;
     text-align: center;
+    margin-top: 20px;
 }
 form input{
     width: 240px;
@@ -84,9 +85,11 @@ form button{
 header a{
     color: #F8F1F1;
 }
+.alert{
+    font-size: 10px;
+}
 .alertIcon{
     display: none;
-    margin: 0px;
 }
 .alert, .alertIcon {
     color: red;
@@ -97,7 +100,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-top: 120px;
+    padding-top: 130px;
+    margin-top: 70px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
@@ -175,6 +179,9 @@ footer a{
     display: flex;
     flex-direction: column;
     
+}
+.cancion-seleccionada{ /*?????????????????????????????????*/
+    background-color: #246eb9ff;
 }
 
 /* ALBUMS INDEX */
@@ -445,15 +452,16 @@ tr{
 }
 th{
     border-bottom: 1px solid rgb(77, 6, 77);
+    color: #246eb9ff;
 }
-.numT{
+.numT, .num{
     width: 5%;
     text-align: center;
 }
 .play{
     text-align: center;
 }
-.play a i:hover{
+.play a i:hover, td a{
     color: black;
 }
 .clock, .duracion{
@@ -463,14 +471,15 @@ th{
     margin-left: 30px;
     color: #246eb9ff;
 }
-th{
-    color: #246eb9ff;
-}
 .boton-play{
     display: none;
 }
 .boton-clean{
     text-align: center;
+}
+.quitar{
+    background-color: rgba(36, 110, 185, 0);
+    border-radius: 2px;
 }
 /*tbody{
     background-color: rgba(145, 185, 36, 0.507);

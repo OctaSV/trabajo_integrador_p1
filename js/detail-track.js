@@ -19,12 +19,14 @@ let cargarPag = window.addEventListener('load', function() {
             .then(function (data){
                     console.log(data);
 
+                    let imagen_cancionurl = data.album.cover;
                     let AlbumID = data.album.id;
                     let ArtistID = data.artist.id;
                     let nombre_cancionurl = data.title;
                     let nombre_albumurl = data.album.title;
                     let nombre_artistaurl = data.artist.name;
  
+                    document.querySelector('.image-track').innerHTML = `<img src="${imagen_cancionurl}" alt="track-image">`
                     document.querySelector('.cancion').innerHTML = `${nombre_cancionurl}`;
                     document.querySelector('.album').innerHTML = `<a href="./detail-album.html?id=${AlbumID}">Album: ${nombre_albumurl}</a>`;
                     document.querySelector('.artista').innerHTML = `<a href="./detail-artist.html?id=${ArtistID}">Artista: ${nombre_artistaurl}</a>`;
@@ -38,34 +40,28 @@ let cargarPag = window.addEventListener('load', function() {
         //Agregar gif a lista de favoritos.
         let favoritos = [];
 
-        //Recuperando datos del storage
         let recuperoStorage = localStorage.getItem('favoritos');
-
-
-        //Chequear que el id esté en el array para cambiar el texto al usuario.
+        //Chequeando y agregando info
+        if(recuperoStorage != null){
+                favoritos = JSON.parse(recuperoStorage);
+        }
+        //Chequear ID
         if(favoritos.includes(id)){
                 document.querySelector('.agregarplaylist').innerText = "Quitar de favoritos";
         }
 
-        
-        //Chequeando y agregando informacion de local storage en el array
-        if(recuperoStorage != null){
-                favoritos = JSON.parse(recuperoStorage);
-        }
-
 
         let agregar_playlist = document.querySelector('.agregarplaylist');
-
         agregar_playlist.addEventListener('click', function(e){
                 e.preventDefault();
 
-                //Chequear si el id está en el array
+                //EL ID esta en el array?
                 if(favoritos.includes(id)){
                         let idASacar = favoritos.indexOf(id);
                         favoritos.splice(idASacar, 1);
                         document.querySelector('.agregarplaylist').innerText = 'Agregar a Playlist';
                 } else {
-                        //Guardamos el id en el array
+                        //Guardar ID en rray
                         favoritos.push(id);
                         console.log(favoritos);
                         document.querySelector('.agregarplaylist').innerText = 'Quitar de favoritos';
@@ -80,4 +76,22 @@ let cargarPag = window.addEventListener('load', function() {
 
         })
 
+    //Validando Formulario
+    let formulario = document.querySelector('form');
+    let campoBuscar = document.querySelector('[name="search"]');
+    let alert = document.querySelector('.alert');
+    let alertIcon = document.querySelector('.alertIcon');
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(campoBuscar.value == ""){
+            alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
+            alertIcon.style.display = 'inline'            
+        } else if(campoBuscar.value.length <= 3){
+            alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
+            alertIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
 })

@@ -50,4 +50,22 @@ fetch(url)
             console.log(error);
     })
 
+    //Validando Formulario
+    let formulario = document.querySelector('form');
+    let campoBuscar = document.querySelector('[name="search"]');
+    let alert = document.querySelector('.alert');
+    let alertIcon = document.querySelector('.alertIcon');
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(campoBuscar.value == ""){
+            alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
+            alertIcon.style.display = 'inline'            
+        } else if(campoBuscar.value.length <= 3){
+            alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
+            alertIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
 }) 

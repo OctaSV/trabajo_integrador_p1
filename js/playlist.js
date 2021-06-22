@@ -10,19 +10,20 @@ window.addEventListener('load', function() {
     let lista = document.querySelector('.table');
 
 
-    //Opcional avisar al usuario que no hay gifs en su lista.
-    /*if(favoritos != null){
+    //Avisar al usuario que no hay canciones en su lista.
+    if(recuperoStorage == undefined || favoritos.length == 0){
         let confirmar = confirm('Añada una canción a favoritos');
         if(confirmar == true){
-            window.location.src = "./index.html";
+            window.location.src = './index.html';
         }
-    }*/
-    
-    //Necesitamos recorrer el array de favoritos
-    for (let i=0; i<favoritos.length; i++){
-        //buscarYMostrarFavoritos
-        buscarYMostrarFavoritos(favoritos[i]);
+    } else{
+        //Necesitamos recorrer el array de favoritos
+        for (let i=0; i<favoritos.length; i++){
+            //buscarYMostrarFavoritos
+            buscarYMostrarFavoritos(favoritos[i]);
+        }
     }
+
 
 
     function buscarYMostrarFavoritos(id){
@@ -36,6 +37,7 @@ window.addEventListener('load', function() {
         .then(function(data){
             console.log(data)
             //procesar
+            
             let resultados = '';
             let idCancion = data.id;
             let idAlbum =  data.album.id;
@@ -45,14 +47,9 @@ window.addEventListener('load', function() {
             let album_cancion = data.album.title;
             let duracion_cancion =  data.duration;
 
-            document.querySelector('num').innerText = '1';
-            document.querySelector('.titulocancion').innerHTML = `<a href="./detail-album.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-album.html?id=${idArtista}>${artista_cancion}</a>`
-            document.querySelector('.album-cancion').innerHTML = `<a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>`
-            document.querySelector('.duracion').innetText = duracion_cancion
-
-            /*lista.innerHTML += 
+            lista.innerHTML += 
         `<tr>
-                <th class="numT">
+            <th class="numT">
                 #
             </th>
             <th>
@@ -67,13 +64,13 @@ window.addEventListener('load', function() {
         </tr>
         <tr>
             <td class="num">
-               1
+              #
             </td>
             <td class= "boton-play">
-                    <a href=""><i class="fas fa-play"></i></a>
+                <a href=""><i class="fas fa-play"></i></a>
             </td>
             <td class="titulocancion">
-                <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a  href=".detail-artist.html?id=${idArtista}>${artista_cancion}</a>
+                <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a href=".detail-artist.html?id=${idArtista}">${artista_cancion}</a>
             </td>
             <td class="album-cancion">
                 <a href="./detail-album.html?id=${idAlbum}">${album_cancion}</a>
@@ -86,19 +83,38 @@ window.addEventListener('load', function() {
             <td class="boton-clean">
                 <button class="quitar">Quitar</button>
             </td>
-        </tr>`*/
-
+        </tr>`
+        
         })
         .catch( function(e){
             console.log(e);
         })
     }
+    
+    //Validando Formulario
+    let formulario = document.querySelector('form');
+    let campoBuscar = document.querySelector('[name="search"]');
+    let alert = document.querySelector('.alert');
+    let alertIcon = document.querySelector('.alertIcon');
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(campoBuscar.value == ""){
+            alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
+            alertIcon.style.display = 'inline'            
+        } else if(campoBuscar.value.length <= 3){
+            alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
+            alertIcon.style.display = 'inline'
+        } else {
+            this.submit();
+        }
+    })
 
     
-    /*Boton PLayer*/
+    /*Boton PLayer
 
 
-    /*let num = document.querySelector('.num');
+    let num = document.querySelector('.num');
     let botonPlay = document.querySelector('.boton-play');
     let bodyT = document.querySelectorAll('.tbody')
     console.log(bodyT);
@@ -106,16 +122,13 @@ window.addEventListener('load', function() {
         console.log('Hola');
         num.style.display = 'none';
         botonPlay.style.display = 'block';
-    })*/
+    })
  
 
     /*Boton Quitar*/
 
     /*let quitar = document.querySelector('quitar');
     quitar.addEventListener('click', function(){
-        if(favoritos = null){
-            alert('No hay para borrar')
-        } else(favoritos != null)
-            favoritos = ''
+        
     })*/
 }) 

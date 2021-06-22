@@ -126,7 +126,11 @@ window.addEventListener('load', function () {
             console.log(error);
         })
 
-
+    //EventoDblClick                                //??????????????????????????????????????????????????????????
+    /*let SelectCanciones = document.querySelector('canciones');
+    SelectCanciones.addEventListener('click', function(){
+        this.classList.toggle('cancion-seleccionada');
+    });*/
 
     //Validando Formulario
     let formulario = document.querySelector('form');
@@ -136,12 +140,11 @@ window.addEventListener('load', function () {
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
-
         if(campoBuscar.value == ""){
-            alert.innerText = 'El campo no puede estar vacío';
+            alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
             alertIcon.style.display = 'inline'            
-        } else if( campoBuscar.value.length < 3){
-            alert.innerText = 'Por favor ingrese más de 3 caracteres';
+        } else if(campoBuscar.value.length <= 3){
+            alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
             alertIcon.style.display = 'inline'
         } else {
             this.submit();
