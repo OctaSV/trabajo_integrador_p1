@@ -56,6 +56,9 @@ header{
     flex-direction: row;
     width: 80%;
 }
+#gifHeader{
+    width: 10%;
+}
 nav{
     width: 100%;
     height: 0px;
@@ -490,9 +493,6 @@ th{
     background-color: rgba(36, 110, 185, 0);
     border-radius: 2px;
 }
-/*tbody{
-    background-color: rgba(145, 185, 36, 0.507);
-}*/
 
 /*Resultados Búsqueda*/
 .resultado-container{
@@ -535,9 +535,7 @@ th{
     width: 100%;
     justify-content: center;
 }
-/*.article-noresultado h4{
-    width: 100%;
-}*/
+
 .recomendado{
     display: flex;
     flex-wrap: wrap;
@@ -573,6 +571,10 @@ th{
     width: 100px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+.busquedaJs {
+    background-color: rgba(0, 0, 255, 0.418);
 }
 
 
@@ -728,6 +730,3 @@ th{
     }
 }
 
-.busquedaJs {
-    background-color: rgba(0, 0, 255, 0.418);
-}
