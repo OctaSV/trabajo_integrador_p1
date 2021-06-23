@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
 
         let alerta = confirm('Añada una canción a favoritos');
         if(alerta == true){
-            window.location.src = './index.html';
+            window.location.href="./index.html";
         }
 
     } else{

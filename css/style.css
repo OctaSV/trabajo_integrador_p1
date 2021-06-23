@@ -24,7 +24,10 @@ a{
     width: 100%;
     justify-content: center;
 }
-
+.giphy-embed{
+    width: 260px;
+    border-radius: 100px;
+}
 /* Estructura principal, Fuentes principal y Fondo Principal */
 body{
     background-image: url(../img/background/back-ground.png);
