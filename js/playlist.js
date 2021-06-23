@@ -1,5 +1,8 @@
 window.addEventListener('load', function() {
 
+    let gifLoading = document.querySelector('.gif');
+    gifLoading.style.display = 'none';
+
     //Recupero el storage.
     let recuperoStorage = localStorage.getItem('favoritos');
     //Obtengo el array 

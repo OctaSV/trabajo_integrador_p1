@@ -1,6 +1,9 @@
 window.addEventListener('load', function() {
 
+    let gifLoading = document.querySelector('.gif');
+    gifLoading.style.display = 'none';
 
+    
     let queryString = location.search 
     let queryStringToObject = new URLSearchParams(queryString); 
     let id = queryStringToObject.get('id');

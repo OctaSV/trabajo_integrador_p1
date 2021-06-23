@@ -5,15 +5,13 @@ window.addEventListener('load', function() {
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
     let aBuscar = queryStringToObject.get('search'); //Acá va el name del campo input del formulario.
     
-
-
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${aBuscar}`
-
+    
     let datoBuscado = document.querySelector('.busqueda');
     datoBuscado.innerText = `"${aBuscar}"`;
     datoBuscado.style.textTransform = 'uppercase';
     
-   
+    
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${aBuscar}`
     
     fetch( url )
         .then( function(response){

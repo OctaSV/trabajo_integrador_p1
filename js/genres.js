@@ -1,5 +1,8 @@
 window.addEventListener('load', function() {
     
+    let gifLoading = document.querySelector('.gif');
+    gifLoading.style.display = 'none';
+
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre'
 
     fetch(url)
