@@ -10,10 +10,13 @@ window.addEventListener('load', function() {
     //destino de los datos en el html
     let lista = document.querySelector('.table');
 
-
     //Avisar al usuario que no hay canciones en su lista.
-    if(recuperoStorage == undefined || favoritos.length == 0){
+    if(recuperoStorage == undefined ||  favoritos.length ==0){
 
+        let alerta = confirm('Añada una canción a favoritos');
+        if(alerta == true){
+            window.location.src = './index.html';
+        }
 
     } else{
         //Necesitamos recorrer el array de favoritos
@@ -22,9 +25,7 @@ window.addEventListener('load', function() {
             buscarYMostrarFavoritos(favoritos[i]);
         }
     }
-
-
-
+    
     function buscarYMostrarFavoritos(id){
 
         let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
@@ -44,12 +45,11 @@ window.addEventListener('load', function() {
             let nombre_cancion = data.title;
             let artista_cancion = data.artist.name;
             let album_cancion = data.album.title;
-            let player = data.preview
             let duracion_cancion =  data.duration;
 
             lista.innerHTML += `<tr>
-                                    <td class="num">
-                                    #
+                                    <td class="quitBoton">
+                                    <a href="./detail-track.html?id=${idCancion}"><i class="far fa-minus-square"></i></a>
                                     </td>
                                     <td class="titulocancion">
                                         <a href="./detail-track.html?id=${idCancion}">${nombre_cancion}</a> - <a href=".detail-artist.html?id=${idArtista}">${artista_cancion}</a>
@@ -71,7 +71,6 @@ window.addEventListener('load', function() {
         })
     }
     
-    
     //Validando Formulario
     let formulario = document.querySelector('form');
     let campoBuscar = document.querySelector('[name="search"]');
@@ -90,24 +89,4 @@ window.addEventListener('load', function() {
             this.submit();
         }
         })
-    /*Boton PLayer
-
-
-    let num = document.querySelector('.num');
-    let botonPlay = document.querySelector('.boton-play');
-    let bodyT = document.querySelectorAll('.tbody')
-    console.log(bodyT);
-    bodyT.addEventListener('mouseover', function(){
-        console.log('Hola');
-        num.style.display = 'none';
-        botonPlay.style.display = 'block';
-    })
- 
-
-    /*Boton Quitar*/
-
-    /*let quitar = document.querySelector('quitar');
-    quitar.addEventListener('click', function(){
-        
-    })*/
 }) 

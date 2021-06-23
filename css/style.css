@@ -143,9 +143,6 @@ footer{
 footer a{
     color: #F8F1F1;
 }
-.fplaylist{
-    margin-top: 155px;
-}
 /* IMG INDEX */
 .index-img{
     width: 300px;
@@ -459,7 +456,7 @@ th{
     border-bottom: 1px solid rgb(77, 6, 77);
     color: #246eb9ff;
 }
-.num, .clock, .duracion{
+.quit, .quitBoton, .clock, .duracion{
     width: 5%;
     text-align: center;
 }
@@ -469,6 +466,10 @@ th{
 .playerHoover:hover{
     color: #246eb9ff;
 }
+.quitBoton :hover{
+    color: #246eb9ff;
+}
+
 .lyric, .player{
     text-align: center;
 }
@@ -488,9 +489,11 @@ th{
 .boton-clean{
     text-align: center;
 }
-.quitar{
-    background-color: rgba(36, 110, 185, 0);
-    border-radius: 2px;
+.fplaylist{
+    margin-top: 369px;
+}
+td a:hover{
+    text-decoration: underline
 }
 
 /*Resultados Búsqueda*/
