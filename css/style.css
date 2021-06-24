@@ -100,6 +100,11 @@ header a{
 .alert, .alertIcon {
     color: red;
 }
+#bienvenida{
+    margin: 0px 45px 0px 0px;
+    text-align: center;
+    color: #246eb9ff;
+}
 
 /*footer*/
 footer{
@@ -148,9 +153,9 @@ footer a{
 }
 /* IMG INDEX */
 .index-img{
-    width: 300px;
-    height: 300px;
-    padding: 20px;
+    width: 230px;
+    height: 230px;
+    margin: 20px;
     border-radius: 28px;
 }
 
@@ -175,7 +180,7 @@ footer a{
 .main-canciones{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -192,7 +197,7 @@ footer a{
 .main-albums{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-bottom: 50px;
 }
@@ -205,7 +210,7 @@ footer a{
 .main-artistas{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-bottom: 50px;
 
@@ -214,6 +219,9 @@ footer a{
     display: flex;
     flex-direction: column;
     
+}
+.artist-box{
+    padding-bottom: 20px;
 }
 
 /*Colores Index*/

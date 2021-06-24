@@ -94,5 +94,7 @@ window.addEventListener('load', function() {
         let quitar = document.getElementById('borrar');
         quitar.addEventListener('click', function(){
             localStorage.clear();
+            window.location.href="./playlist.html"
         })
+
 }) 

@@ -3,10 +3,14 @@ window.addEventListener('load', function () {
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
     
-    
     //Bienvenida al usuario
-    let nombreUsuario = prompt('¿Cómo es tu nombre?');
-    confirm(`Bienvenid@${nombreUsuario}!!!`)
+    let bienvenida = document.getElementById('bienvenida');
+    let nombreUsuario  = prompt('¿Cómo es tu nombre?');
+    bienvenida.innerText = `Bienvenid@ ${nombreUsuario}!`
+    bienvenida.style.textTransform = 'uppercase';
+        
+    
+    //FETCH CANCIONES
 
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 
@@ -48,7 +52,8 @@ window.addEventListener('load', function () {
             console.log(error);
         })
 
-        // Fetch Albums
+
+        // FETCH ALBUMS
 
         fetch(url)
         .then(function (response) {
@@ -111,16 +116,14 @@ window.addEventListener('load', function () {
                 let idArtista = data.artists.data[i].id
                
 
-                contenidoLista += `<a href="./detail-artist.html?id=${idArtista}">
-                <article class="artistas">
-                    <div class="img-container">
-                        <img class="index-img" src="${imagenArtists}" alt="">
-    
-                    </div>
-                    <h5 class="titulo-elementos">${tituloArtists}</h5>
-    
-                </article>
-            </a>`
+                contenidoLista += `<a href="./detail-artist.html?id=${idArtista}" class="artist-box">
+                                         <article class="artistas">
+                                            <div class="img-container">
+                                                <img class="index-img" src="${imagenArtists}" alt="">
+                                            </div>
+                                            <h5 class="titulo-elementos">${tituloArtists}</h5>
+                                        </article>
+                                    </a>`
             }
 
             lista.innerHTML += contenidoLista
@@ -130,6 +133,8 @@ window.addEventListener('load', function () {
         .catch(function (error) {
             console.log(error);
         })
+
+
 
     //EventoDblClick                                //??????????????????????????????????????????????????????????
     /*let SelectCanciones = document.querySelector('canciones');
