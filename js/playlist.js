@@ -102,4 +102,33 @@ window.addEventListener('load', function() {
         window.location.href="./playlist.html"
     })
 
+    //Playlist Recomendadas
+
+    let urlPlaylistReco = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart';
+
+    fetch( urlPlaylistReco )
+            .then( function(response){
+            return response.json();
+        })
+            .then( function(data){
+                console.log(data);
+
+                let playlistReco = document.querySelector('.recomendadas');
+                let contenidoPlaylistReco = '';
+
+                for(let i=0; i<4;i++){
+                    let imagen_playlistReco = data.playlists.data[i].picture;
+                    let title_playlistReco = data.playlists.data[i].title;
+                    let id_playlistReco = data.playlists.data[i].link;
+                    
+                    contenidoPlaylistReco +=   `<ul>
+                                                    <li>
+                                                        <a href="${id_playlistReco}"><img src="${imagen_playlistReco}" alt="img-reco" class="img-playlist-reco"></a>
+                                                        <a href="${id_playlistReco}">${title_playlistReco}</a>
+                                                    </li>
+                                                </ul>`
+                }
+                playlistReco.innerHTML += contenidoPlaylistReco
+            })
+
 }) 

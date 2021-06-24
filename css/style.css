@@ -533,6 +533,46 @@ td a:hover{
     padding: 50px;
     margin-left: 75px;
 }
+.playlistReco{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(255, 0, 221, 0.842);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.playlistReco h4{
+    text-align: center;
+}
+.recomendadas{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.recomendadas ul{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+}
+.recomendadas ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 5px;
+}
+.recomendadas ul li:hover{
+    background-color: rgba(25, 0, 114, 0.81);
+}
+.recomendadas ul li a{
+    color: black;
+}
+.recomendadas ul li a img{
+    border-radius: 5px;
+}
 
 /*Resultados Búsqueda*/
 .resultado-container{
@@ -575,43 +615,44 @@ td a:hover{
     width: 100%;
     justify-content: center;
 }
-
 .recomendado{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     background-color: rgba(255, 0, 221, 0.842);
-    justify-content: center;
+    border-radius: 5px;
     width: 100%;
     margin-top: 10%;
+    align-items: center;
 }
 .recomendado ul{
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
+    width: 80%;
 }
 .recomendado ul li{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     width: 33.3%;
+    text-align: center;
+    margin: 0px 40px 0px 40px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
 }
+.recomendado ul li:hover{
+    background-color: rgba(25, 0, 114, 0.81);
+}
+
 .recomendado ul li a{
     color:black;
+}
+.recomendado ul li a img{
+    border-radius: 5px;
 }
 .recomendado h4{
     width: 100%;
     text-align: center;
 }
-.img-reco{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.img-reco img{
-    width: 100px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
+
 
 .busquedaJs {
     background-color: rgba(0, 0, 255, 0.418);

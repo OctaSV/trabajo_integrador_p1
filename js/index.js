@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
     
     //FETCH CANCIONES
 
-    let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
+    let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart';
 
 
     fetch(url)

@@ -89,13 +89,13 @@ window.addEventListener('load', function() {
                 let contenidoListaResultados = '';
 
                 let cancionRecomendada = data.tracks.data[0].title;
-                let imagenCancionRecomendada = data.tracks.data[0].album.cover_big;
+                let imagenCancionRecomendada = data.tracks.data[0].album.cover;
 
                 let albumRecomendado = data.albums.data[0].title;
-                let imagenAlbumRecomendado = data.albums.data[0].cover_big;
+                let imagenAlbumRecomendado = data.albums.data[0].cover;
                 
                 let artistaRecomendado = data.artists.data[0].name;
-                let imagenArtistaRecomendao = data.artists.data[0].picture_big;
+                let imagenArtistaRecomendao = data.artists.data[0].picture;
                 
                 let cancionB = data.tracks.data[0].id;
                 let albumB = data.albums.data[0].id;
@@ -105,20 +105,18 @@ window.addEventListener('load', function() {
                 contenidoListaResultados += `<h4>Recomendados</h4>
                                             <ul>
                                                 <li>
-                                                    <a href="./detail-track.html">Canción: ${cancionRecomendada}</a>
+                                                    <a href="./detail-track.html?id=${cancionB}"><img src="${imagenCancionRecomendada}" alt=""></a>
+                                                    <a href="./detail-track.html?id=${cancionB}">Canción: ${cancionRecomendada}</a>
                                                 </li>
                                                 <li>
-                                                    <a href="./detail-album.html">Album: ${albumRecomendado}</a>
+                                                    <a href="./detail-album.html?id=${albumB}"><img src="${imagenAlbumRecomendado}" alt=""></a>
+                                                    <a href="./detail-album.html?id=${albumB}">Album: ${albumRecomendado}</a>
                                                 </li>
                                                 <li>
-                                                    <a href="./detail-artist.html">Artista: ${artistaRecomendado}</a>
+                                                    <a href="./detail-artist.html?id=${artistaB}"><img src="${imagenArtistaRecomendao}" alt=""></a>
+                                                    <a href="./detail-artist.html?id=${artistaB}">Artista: ${artistaRecomendado}</a>
                                                 </li>
-                                            </ul>
-                                            <div class="img-reco">
-                                                <a href="./detail-track.html?id=${cancionB}"><img src="${imagenCancionRecomendada}" alt=""></a>
-                                                <a href="./detail-album.html?id=${albumB}"><img src="${imagenAlbumRecomendado}" alt=""></a>
-                                                <a href="./detail-artist.html?id=${artistaB}"><img src="${imagenArtistaRecomendao}" alt=""></a>
-                                            </div>`
+                                            </ul>`
 
                 listaResultados.innerHTML += contenidoListaResultados
                 
