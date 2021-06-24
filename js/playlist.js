@@ -89,4 +89,10 @@ window.addEventListener('load', function() {
             this.submit();
         }
         })
+
+        //Borrar todo del storage
+        let quitar = document.getElementById('borrar');
+        quitar.addEventListener('click', function(){
+            localStorage.clear();
+        })
 }) 

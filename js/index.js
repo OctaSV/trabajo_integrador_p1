@@ -1,7 +1,12 @@
 window.addEventListener('load', function () {
-
+    
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
+    
+    
+    //Bienvenida al usuario
+    let nombreUsuario = prompt('¿Cómo es tu nombre?');
+    confirm(`Bienvenid@${nombreUsuario}!!!`)
 
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart'
 
