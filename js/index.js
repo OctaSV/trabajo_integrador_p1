@@ -74,16 +74,14 @@ window.addEventListener('load', function () {
                 let artistaAlbums = data.albums.data[i].artist.name;
 
                 contenidoLista += `<a href="./detail-album.html?id=${idAlbum}">
-                <article class="albums">
-                    <div class="img-container">
-                        <img class="index-img" src="${imagenAlbums}" alt="">
-    
-                    </div>
-                    <h5 class="titulo-elementos">${tituloAlbums}</h5>
-                    <p class="texto-elementos">${artistaAlbums}</p>
-    
-                </article>
-            </a>`
+                                        <article class="albums">
+                                            <div class="img-container">
+                                                <img class="index-img" src="${imagenAlbums}" alt="">
+                                            </div>
+                                            <h5 class="titulo-elementos">${tituloAlbums}</h5>
+                                            <p class="texto-elementos">${artistaAlbums}</p>
+                                        </article>
+                                    </a>`
             }
 
             lista.innerHTML += contenidoLista
@@ -133,14 +131,6 @@ window.addEventListener('load', function () {
         .catch(function (error) {
             console.log(error);
         })
-
-
-
-    //EventoDblClick                                //??????????????????????????????????????????????????????????
-    /*let SelectCanciones = document.querySelector('canciones');
-    SelectCanciones.addEventListener('click', function(){
-        this.classList.toggle('cancion-seleccionada');
-    });*/
 
     //Validando Formulario
     let formulario = document.querySelector('form');
