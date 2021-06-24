@@ -468,7 +468,8 @@ ul.detailGenres li{
     background-color: rgba(255, 0, 221, 0.842);
     border-radius: 10px;
     padding: 50px;
-    margin-left: 75px;}
+    margin-left: 75px;
+}
 tr, tr td, tr td a{
     text-align: left;
     color: black;
@@ -510,9 +511,6 @@ th{
 .boton-clean{
     text-align: center;
 }
-.fplaylist{
-    margin-top: 369px;
-}
 td a:hover{
     text-decoration: underline
 }
@@ -524,6 +522,16 @@ td a:hover{
 }
 #borrar:hover{
     background-color: #246eb9ff;
+}
+#vacia{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 0, 221, 0.842);
+    width: 90%;
+    border-radius: 10px;
+    padding: 50px;
+    margin-left: 75px;
 }
 
 /*Resultados Búsqueda*/

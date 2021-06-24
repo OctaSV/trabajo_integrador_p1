@@ -14,6 +14,12 @@ window.addEventListener('load', function() {
     if(recuperoStorage == undefined ||  favoritos.length ==0){
 
         let alerta = confirm('Añada una canción a favoritos');
+        let quitar = document.getElementById('borrar');
+        let playlistVacia = document.getElementById('vacia');
+        lista.style.display = 'none'
+        quitar.style.display = 'none'
+        playlistVacia.style.display = 'flex'
+
         if(alerta == true){
             window.location.href="./index.html";
         }
