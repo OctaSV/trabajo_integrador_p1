@@ -55,7 +55,7 @@ let cargarPag = window.addEventListener('load', function() {
         agregar_playlist.addEventListener('click', function(e){
                 e.preventDefault();
 
-                //EL ID esta en el array?
+                //EL ID esta en el array
                 if(favoritos.includes(id)){
                         let idASacar = favoritos.indexOf(id);
                         favoritos.splice(idASacar, 1);

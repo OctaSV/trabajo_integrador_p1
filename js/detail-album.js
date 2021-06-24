@@ -30,19 +30,20 @@ fetch(url)
   
                 
                 contenidoDetalleAlbums += `<section class="section-album">
-                <article class="album-data">
-                <h2>Album: ${nombreAlbum}</h2>
-                <h3><a href="./detail-artist.html?id=${idArtista}">Artista: ${nombreArtistaAlbum}</a></h2>
-                <h3><a href="./detail-genres.html?id=${idGenero}">Genero: ${generoAlbum}</a></h3>
-                <h3>Publicado en: ${fechaPublicacion}</h3>
-                </article>
-                <article class="album-songs">
-                <h2>Canciones Álbum</h2>
-                <ul>
-                <li><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${id}" width="650" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></li>
-                </ul>
-                <img src="${imagenAlbum}" alt="">
-                </section>`
+                                                <article class="album-data">
+                                                    <h2>Album: ${nombreAlbum}</h2>
+                                                    <h3><a href="./detail-artist.html?id=${idArtista}">Artista: ${nombreArtistaAlbum}</a></h2>
+                                                    <h3><a href="./detail-genres.html?id=${idGenero}">Genero: ${generoAlbum}</a></h3>
+                                                    <h3>Publicado en: ${fechaPublicacion}</h3>
+                                                </article>
+                                                <article class="album-songs">
+                                                    <h2>Canciones Álbum</h2>
+                                                    <ul>
+                                                    <li><a href="./detail-track.html"><iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/${id}" width="650" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></a></li>
+                                                    </ul>
+                                                    <img src="${imagenAlbum}" alt="">
+                                                </article>
+                                            </section>`
                 
         
             listaDetalleAlbums.innerHTML += contenidoDetalleAlbums

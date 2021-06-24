@@ -295,10 +295,14 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     flex-direction: column;
     justify-content:center;
 }
+.album-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .section-album{
     background-color: rgba(255, 0, 221, 0.842);
-    width: 90%;
-    margin: 60px 60px 0px 60px;
+    width: 76%;
     border-radius: 5px;
     display: flex;
     flex-direction: row;

@@ -35,8 +35,7 @@ window.addEventListener('load', function() {
             return response.json();
         })
         .then(function(data){
-            console.log(data)
-            //procesar
+            console.log(data);
             
             let resultados = '';
             let idCancion = data.id;
@@ -90,11 +89,11 @@ window.addEventListener('load', function() {
         }
         })
 
-        //Borrar todo del storage
-        let quitar = document.getElementById('borrar');
-        quitar.addEventListener('click', function(){
-            localStorage.clear();
-            window.location.href="./playlist.html"
-        })
+    //Borrar todo del storage
+    let quitar = document.getElementById('borrar');
+    quitar.addEventListener('click', function(){
+        localStorage.clear();
+        window.location.href="./playlist.html"
+    })
 
 }) 
