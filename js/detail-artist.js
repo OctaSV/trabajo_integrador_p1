@@ -34,7 +34,7 @@ window.addEventListener('load', function() {
             
             
 
-            contenidoDetalleArtistas += `<div class="da-contenedor-img">
+            contenidoDetalleArtistas = `<div class="da-contenedor-img">
                                             <img class="da-img" src="${imagenDetalleArtista}" alt="">
                                             </div>
                                             <div class="da-div-texto">
@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
                                         </div>`
         
     
-    listaDetalleArtistas.innerHTML += contenidoDetalleArtistas
+    listaDetalleArtistas.innerHTML = contenidoDetalleArtistas
 
 })
 
