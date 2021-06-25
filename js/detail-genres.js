@@ -84,6 +84,3 @@ window.addEventListener('load', function () {
 
 
 })
-
-
-
