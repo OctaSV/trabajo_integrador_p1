@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
                 let idArtista = data.data[i].id
                 //let nombreGenero =  CONSULTAR
 
-                contenidoLista += `<li><a href="./detail-artist.html?id=${idArtista}"> ${nombreArtista} </a><img src="${imagenArtista}" alt=""></img></li>`
+                contenidoLista += `<li><a href="./detail-artist.html?id=${idArtista}"> ${nombreArtista}<img src="${imagenArtista}" alt=""></img></li></a>`
 
             }
             lista.innerHTML += contenidoLista
@@ -74,9 +74,9 @@ window.addEventListener('load', function () {
                 let nombreGeneros = data.name;
                 
 
-                contenido += `<h1 class="">Genero ${nombreGeneros}:</h1>`
+                contenido = `Género ${nombreGeneros}`
 
-                lista.innerHTML += contenido
+                lista.innerText = contenido
                 
             })
 

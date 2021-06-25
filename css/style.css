@@ -377,7 +377,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 
 
 /* GENRES */
-container.genres{
+.genres{
     display: flex;
     flex-wrap: wrap;
 }
@@ -396,7 +396,6 @@ article.genres{
     background-color: rgba(255, 0, 221, 0.842);
     margin-left: 3%;
     margin-right: 3%;
-    padding-left: 3%;
 }
 ul.genres-1{
     font-size: 30px;
@@ -425,37 +424,37 @@ ul.genres-4{
 
 /*Detail-genders*/
 section.detail-genres{
-    background-color: rgba(255, 0, 221, 0.842);
-    margin-left: 3%;
-    margin-right: 3%;
-}
-article.detail-genres{
-    margin-left: 3%;
-    margin-right: 3%;
-    padding-left: 3%;
-    display: flex;
-    flex-direction: row;
-}
-.detail-genres h1{
-    font-size: 40px;
-    color: black;
-    margin-left: 20px;
-}
-ul.detailGenres{
-    font-size: 50px;
-    margin: 5%;
     display: flex;
     flex-direction: column;
+    background-color: rgba(255, 0, 221, 0.842);
+    margin-left: 150px;
+    width: 80%;
+    align-items: center;
+    border-radius: 5px;
+}
+.detail-genres ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    text-align: center;
 }
-ul.detailGenres li{
-    list-style-type: square;
-    color: #246eb9ff;
+.detail-genres ul li{
+    margin: 20px;
+    width: 15%;
 }
-.detailGenres img{
-    width: 250px;
-    height: 250px;
+.detail-genres ul li img{
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+}
+.detail-genres ul li a{
+    margin-bottom: 10px;
+    color: black;
+}
+.detail-genres ul li a:hover{
+    text-decoration: underline;
 }
 
 /*PlayList*/
@@ -785,20 +784,12 @@ td a:hover{
     }
     /* detail generos */
     section.detail-genres{
-        background-color: rgba(255, 0, 221, 0.72);
-    }
-    .detail-genres h1{
+        width: 100vw;
         margin: 0px;
-        font-size: 35px;
-        text-align: center;
     }
-    ul.detail-genres{
-        font-size: 30px;
-        margin: 5%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    .detail-genres ul li a img{
+        width: 18vw;
+        height: 18vh;
     }
     /* playlists */
     .container-table{
