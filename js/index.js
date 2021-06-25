@@ -1,15 +1,15 @@
 window.addEventListener('load', function () {
-    
+
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
-    
+
     //Bienvenida al usuario
     let bienvenida = document.getElementById('bienvenida');
-    let nombreUsuario  = prompt('¿Cómo es tu nombre?');
+    let nombreUsuario = prompt('¿Cómo es tu nombre?');
     bienvenida.innerText = `Bienvenid@ ${nombreUsuario}!`
     bienvenida.style.textTransform = 'uppercase';
-        
-    
+
+
     //FETCH CANCIONES
 
     let url = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart';
@@ -53,20 +53,20 @@ window.addEventListener('load', function () {
         })
 
 
-        // FETCH ALBUMS
+    // FETCH ALBUMS
 
-        fetch(url)
+    fetch(url)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            //Aca muestro código
+
             console.log();
 
             let lista = document.querySelector('.main-albums');
-            let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
+            let contenidoLista = '';
 
-            for (let i = 0; i<5; i++) {
+            for (let i = 0; i < 5; i++) {
 
                 let idAlbum = data.albums.data[i].id;
                 let imagenAlbums = data.albums.data[i].cover_big;
@@ -93,26 +93,25 @@ window.addEventListener('load', function () {
         })
 
 
-        //FETCH ARTISTAS
+    //FETCH ARTISTAS
 
-        fetch(url)
+    fetch(url)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            //Aca muestro código
-            //console.log(data);
+
 
             let lista = document.querySelector('.main-artistas');
-            let contenidoLista = ''; //poner el contenido a mostrar dentro de la lista.
+            let contenidoLista = '';
 
             for (let i = 0; i < 5; i++) {
 
-              //  let id = data.albums.data[i].id;
+                //  let id = data.albums.data[i].id;
                 let imagenArtists = data.artists.data[i].picture_big;
                 let tituloArtists = data.artists.data[i].name;
                 let idArtista = data.artists.data[i].id
-               
+
 
                 contenidoLista += `<a href="./detail-artist.html?id=${idArtista}" class="artist-box">
                                          <article class="artistas">
@@ -124,7 +123,7 @@ window.addEventListener('load', function () {
                                     </a>`
             }
 
-            lista.innerHTML += contenidoLista
+            lista.innerHTML += contenidoLista;
 
 
         })
@@ -138,12 +137,12 @@ window.addEventListener('load', function () {
     let alert = document.querySelector('.alert');
     let alertIcon = document.querySelector('.alertIcon');
 
-    formulario.addEventListener('submit', function(e){
+    formulario.addEventListener('submit', function (e) {
         e.preventDefault();
-        if(campoBuscar.value == ""){
+        if (campoBuscar.value == "") {
             alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
-            alertIcon.style.display = 'inline'            
-        } else if(campoBuscar.value.length <= 3){
+            alertIcon.style.display = 'inline'
+        } else if (campoBuscar.value.length <= 3) {
             alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
             alertIcon.style.display = 'inline'
         } else {

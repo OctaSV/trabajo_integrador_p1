@@ -1,21 +1,21 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
 
-    
-    let queryString = location.search 
-    let queryStringToObject = new URLSearchParams(queryString); 
+
+    let queryString = location.search
+    let queryStringToObject = new URLSearchParams(queryString);
     let id = queryStringToObject.get('id');
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`
     //console.log(id)
 
-fetch(url)
-    .then(function (response){
-        return response.json();
-    })
-    .then(function (data){
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
             console.log(data);
 
             let listaDetalleAlbums = document.querySelector('.album-image');
@@ -27,9 +27,9 @@ fetch(url)
             let fechaPublicacion = data.release_date;
             let idArtista = data.artist.id;
             let idGenero = data.genres.data[0].id;
-  
-                
-                contenidoDetalleAlbums = `<section class="section-album">
+
+
+            contenidoDetalleAlbums = `<section class="section-album">
                                                 <article class="album-data">
                                                     <h2>Album: ${nombreAlbum}</h2>
                                                     <h3><a href="./detail-artist.html?id=${idArtista}">Artista: ${nombreArtistaAlbum}</a></h2>
@@ -44,15 +44,15 @@ fetch(url)
                                                     <img src="${imagenAlbum}" alt="">
                                                 </article>
                                             </section>`
-                
-        
-            listaDetalleAlbums.innerHTML = contenidoDetalleAlbums
-    
 
-    })
-    .catch(function(error){
+
+            listaDetalleAlbums.innerHTML = contenidoDetalleAlbums
+
+
+        })
+        .catch(function (error) {
             console.log(error);
-    })
+        })
 
     //Validando Formulario
     let formulario = document.querySelector('form');
@@ -60,16 +60,16 @@ fetch(url)
     let alert = document.querySelector('.alert');
     let alertIcon = document.querySelector('.alertIcon');
 
-    formulario.addEventListener('submit', function(e){
+    formulario.addEventListener('submit', function (e) {
         e.preventDefault();
-        if(campoBuscar.value == ""){
+        if (campoBuscar.value == "") {
             alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
-            alertIcon.style.display = 'inline'            
-        } else if(campoBuscar.value.length <= 3){
+            alertIcon.style.display = 'inline'
+        } else if (campoBuscar.value.length <= 3) {
             alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
             alertIcon.style.display = 'inline'
         } else {
             this.submit();
         }
     })
-}) 
+})

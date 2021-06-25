@@ -1,38 +1,38 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
 
-    let queryString = location.search 
-    let queryStringToObject = new URLSearchParams(queryString); 
+    let queryString = location.search
+    let queryStringToObject = new URLSearchParams(queryString);
     let id = queryStringToObject.get('id');
-        
+
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`
     //console.log(id)
-    
-  
+
+
 
     fetch(url)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-        
-        
-        let listaDetalleArtistas = document.querySelector('.da-article');
-        let contenidoDetalleArtistas = '';
-        
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
 
-        
+
+            let listaDetalleArtistas = document.querySelector('.da-article');
+            let contenidoDetalleArtistas = '';
+
+
+
 
             let imagenDetalleArtista = data.picture_big;
             let nombreDetalleArtista = data.name;
-            
-            
-            
-            
+
+
+
+
 
             contenidoDetalleArtistas = `<div class="da-contenedor-img">
                                             <img class="da-img" src="${imagenDetalleArtista}" alt="">
@@ -49,15 +49,15 @@ window.addEventListener('load', function() {
                                                 
                                                 </ul>
                                         </div>`
-        
-    
-    listaDetalleArtistas.innerHTML = contenidoDetalleArtistas
 
-})
 
-    .catch(function (error) {
-        console.log(error);
-    })
+            listaDetalleArtistas.innerHTML = contenidoDetalleArtistas
+
+        })
+
+        .catch(function (error) {
+            console.log(error);
+        })
 
     //Validando Formulario
     let formulario = document.querySelector('form');
@@ -65,16 +65,16 @@ window.addEventListener('load', function() {
     let alert = document.querySelector('.alert');
     let alertIcon = document.querySelector('.alertIcon');
 
-    formulario.addEventListener('submit', function(e){
+    formulario.addEventListener('submit', function (e) {
         e.preventDefault();
-        if(campoBuscar.value == ""){
+        if (campoBuscar.value == "") {
             alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
-            alertIcon.style.display = 'inline'            
-        } else if(campoBuscar.value.length <= 3){
+            alertIcon.style.display = 'inline'
+        } else if (campoBuscar.value.length <= 3) {
             alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
             alertIcon.style.display = 'inline'
         } else {
             this.submit();
         }
     })
-}) 
+})
