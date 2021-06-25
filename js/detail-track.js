@@ -39,7 +39,6 @@ let cargarPag = window.addEventListener('load', function() {
         
         //Agregar gif a lista de favoritos.
         let favoritos = [];
-
         let recuperoStorage = localStorage.getItem('favoritos');
         //Chequeando y agregando info
         if(recuperoStorage != null){

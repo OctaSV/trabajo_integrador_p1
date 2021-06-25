@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
     let lista = document.querySelector('.table');
 
     //Avisar al usuario que no hay canciones en su lista.
-    if(recuperoStorage == undefined ||  favoritos.length ==0){
+    if( recuperoStorage == undefined ||  favoritos.length == 0){
 
         let alerta = confirm('Añada una canción a favoritos');
         let quitar = document.getElementById('borrar');
@@ -71,7 +71,7 @@ window.addEventListener('load', function() {
                                 </tr>`
         
         })
-        .catch( function(e){
+        .catch(function(e){
             console.log(e);
         })
     }

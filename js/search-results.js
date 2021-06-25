@@ -1,5 +1,7 @@
 window.addEventListener('load', function() {
 
+    let gifLoading = document.querySelector('.gif');
+    gifLoading.style.display = 'none';
 
     let queryString = location.search //Caputramso qs
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
@@ -14,10 +16,10 @@ window.addEventListener('load', function() {
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${aBuscar}`
     
     fetch( url )
-        .then( function(response){
+        .then (function(response){
             return response.json();
         })
-        .then( function(data){
+        .then (function(data){
             //Aca muestro código
             console.log(data);
             let lista = document.querySelector('.resultado');
@@ -71,10 +73,6 @@ window.addEventListener('load', function() {
 
 
     // Recomendados
-   
-    let queryStringB = location.search 
-    let queryStringToObjectB = new URLSearchParams(queryStringB); 
-    let id = queryStringToObjectB.get('id');
 
     let urlRecomendados = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart`
 

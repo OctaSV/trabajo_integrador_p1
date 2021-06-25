@@ -201,6 +201,7 @@ footer a{
 .albums{
     display: flex;
     flex-direction: column;
+    text-align: center;
     
 }
 /* ARTISTAS INDEX */
