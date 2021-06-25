@@ -561,7 +561,7 @@ td a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 5px;
+    padding: 25px;
     border-radius: 5px;
 }
 .recomendadas ul li:hover{
@@ -668,7 +668,7 @@ td a:hover{
     .logo{
         display: flex;
         width: 100vw;
-        height: 20vh;
+        height: 30vh;
         justify-content: center;
     }
     .logo a{
@@ -680,6 +680,9 @@ td a:hover{
     #centroheader{
         width: 100vw;
         height: 30vh;
+    }
+    #gifHeader{
+        display: none;
     }
 
     /*Home*/
@@ -716,14 +719,15 @@ td a:hover{
     .track-data{
         width: 100vw;
     }
-    .video{
-        width: 100vw;
-    }
-    .video video{
-        margin-top: 20px;
-        width: 230px;
+    .reproductor-track iframe{
+        width: 40vh;
+        margin: 0px;
     }
     /* detail albums */
+    .album-data{
+        margin: 0px;
+        text-align: center;
+    }
     .container-album{
         align-items: center;
     }
@@ -734,15 +738,20 @@ td a:hover{
         margin: 0px;
         width: 80vw;
     }
-    .section-album article img{
-        width: 300px;
-        height: 300px;
-    }
     .album-songs{
         margin-left: 0px;
     }
-
+    .album-songs ul li a iframe{
+        width: 70vw;
+    }
+    .album-songs img{
+        width: 40vw;
+    }
     /*detail artists*/
+    .da-tracks a iframe{
+        width: 75vw;
+        margin: 33px;
+    }
     .da-article{
         display: flex;
         flex-direction: column;
@@ -768,9 +777,10 @@ td a:hover{
         flex-direction: column;
         align-items: center;
     }
-    ul.genres{
-        font-size: 23px;
-        width: 50%;
+    .genres ul{
+        width: 90vw;
+    }
+    .genres ul li a{
         text-align: center;
     }
     /* detail generos */
@@ -795,8 +805,25 @@ td a:hover{
         flex-direction: column;
         align-items: center;
     }
+    #vacia{
+        margin: 0px;
+    }
+    .playlistReco{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .recomendadas ul li a{
+        font-size: 10px;
+    }
+    .recomendadas ul li a img{
+        height: 20vh;
+    }
     .table{
-        margin-right: 0px;
+        margin: 0px;
+    }
+    #borrar{
+        margin-left: 70%;
+        width: 20vw;
     }
     /*resultado de búsqueda*/
     .resultado-container h1{
