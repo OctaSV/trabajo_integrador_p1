@@ -40,12 +40,12 @@ window.addEventListener('load', function () {
     let alert = document.querySelector('.alert');
     let alertIcon = document.querySelector('.alertIcon');
 
-    formulario.addEventListener('submit', function(e){
+    formulario.addEventListener('submit', function (e) {
         e.preventDefault();
-        if(campoBuscar.value == ""){
+        if (campoBuscar.value == "") {
             alert.innerText = 'EL CAMPO NO PUEDE ESTAR VACÍO';
-            alertIcon.style.display = 'inline'            
-        } else if(campoBuscar.value.length <= 3){
+            alertIcon.style.display = 'inline'
+        } else if (campoBuscar.value.length <= 3) {
             alert.innerText = 'POR FAVOR INGRESE MÁS DE TRES CARÁCTERES';
             alertIcon.style.display = 'inline'
         } else {
@@ -55,30 +55,30 @@ window.addEventListener('load', function () {
 
     // GENERO
 
-    let queryStringB = location.search 
-    let queryStringToObjectB = new URLSearchParams(queryStringB); 
+    let queryStringB = location.search
+    let queryStringToObjectB = new URLSearchParams(queryStringB);
     let idGenero = queryStringToObjectB.get('idGenero');
 
     let urlRecomendados = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
 
-        fetch( urlRecomendados )
-            .then( function(response){
+    fetch(urlRecomendados)
+        .then(function (response) {
             return response.json();
         })
-            .then( function(data){
-               
-                console.log(data);
-                let lista = document.querySelector('.nombreGenero');
-                let contenido = '';
+        .then(function (data) {
 
-                let nombreGeneros = data.name;
-                
+            console.log(data);
+            let lista = document.querySelector('.nombreGenero');
+            let contenido = '';
 
-                contenido = `Género ${nombreGeneros}`
+            let nombreGeneros = data.name;
 
-                lista.innerText = contenido
-                
-            })
+
+            contenido = `Género ${nombreGeneros}`
+
+            lista.innerText = contenido
+
+        })
 
 
 
