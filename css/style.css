@@ -303,7 +303,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 .section-album{
     background-color: rgba(255, 0, 221, 0.842);
-    width: 60%;
+    width: 65%;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -319,6 +319,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 .album-data{
     text-align: center;
     width: 35%;
+    margin-left: 20px;
 }
 .album-data h3, h3 a{
     font-weight: lighter;
