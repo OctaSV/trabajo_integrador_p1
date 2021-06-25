@@ -52,6 +52,37 @@ window.addEventListener('load', function () {
             this.submit();
         }
     })
+
+    // GENERO
+
+    let queryStringB = location.search 
+    let queryStringToObjectB = new URLSearchParams(queryStringB); 
+    let idGenero = queryStringToObjectB.get('idGenero');
+
+    let urlRecomendados = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
+
+        fetch( urlRecomendados )
+            .then( function(response){
+            return response.json();
+        })
+            .then( function(data){
+               
+                console.log(data);
+                let lista = document.querySelector('.nombreGenero');
+                let contenido = '';
+
+                let nombreGeneros = data.name;
+                
+
+                contenido += `<h1 class="">Genero ${nombreGeneros}:</h1>`
+
+                lista.innerHTML += contenido
+                
+            })
+
+
+
+
 })
 
 

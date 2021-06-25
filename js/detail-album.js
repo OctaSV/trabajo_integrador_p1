@@ -29,7 +29,7 @@ fetch(url)
             let idGenero = data.genres.data[0].id;
   
                 
-                contenidoDetalleAlbums += `<section class="section-album">
+                contenidoDetalleAlbums = `<section class="section-album">
                                                 <article class="album-data">
                                                     <h2>Album: ${nombreAlbum}</h2>
                                                     <h3><a href="./detail-artist.html?id=${idArtista}">Artista: ${nombreArtistaAlbum}</a></h2>
@@ -46,7 +46,7 @@ fetch(url)
                                             </section>`
                 
         
-            listaDetalleAlbums.innerHTML += contenidoDetalleAlbums
+            listaDetalleAlbums.innerHTML = contenidoDetalleAlbums
     
 
     })
