@@ -447,8 +447,8 @@ section.detail-genres{
     width: 15%;
 }
 .detail-genres ul li img{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 5px;
 }
 .detail-genres ul li a{

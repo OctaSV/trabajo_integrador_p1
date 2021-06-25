@@ -4,7 +4,7 @@ let cargarPag = window.addEventListener('load', function() {
         gifLoading.style.display = 'none';
 
 
-        let queryString = location.search 
+        let queryString = location.search;
         let queryStringToObject = new URLSearchParams(queryString); 
         let id = queryStringToObject.get('id');
         
@@ -37,7 +37,7 @@ let cargarPag = window.addEventListener('load', function() {
             })
         
         
-        //Agregar gif a lista de favoritos.
+        //Agregar cancion playlist
         let favoritos = [];
         let recuperoStorage = localStorage.getItem('favoritos');
         //Chequeando y agregando info
