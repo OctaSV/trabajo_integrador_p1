@@ -113,6 +113,7 @@ footer{
     flex-direction: row;
     padding-top: 130px;
     width: 100%;
+    margin-top: 85px;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
 }
