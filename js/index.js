@@ -33,15 +33,15 @@ window.addEventListener('load', function () {
                 let tituloCanciones = data.tracks.data[i].title;
                 let nombreArtista = data.tracks.data[i].artist.name;
 
-                contenidoLista += `<a href="./detail-track.html?id=${id}">
-                                        <article class="canciones">
-                                            <div class="img-container">
-                                                <img class="index-img" src="${imagenCanciones}" alt="">
-                                            </div>
-                                            <h5 class="titulo-elementos">${tituloCanciones}</h5>
-                                            <p class="texto-elementos">${nombreArtista}</p>
-                                        </article>
-                                    </a>`
+                contenidoLista += `<article class="canciones">
+                                            <a href="./detail-track.html?id=${id}">
+                                                <div class="img-container">
+                                                    <img class="index-img" src="${imagenCanciones}" alt="">
+                                                </div>
+                                                <h5 class="titulo-elementos">${tituloCanciones}</h5>
+                                                <p class="texto-elementos">${nombreArtista}</p>
+                                            </a>
+                                        </article>`
             }
 
             lista.innerHTML += contenidoLista
@@ -73,15 +73,15 @@ window.addEventListener('load', function () {
                 let tituloAlbums = data.albums.data[i].title;
                 let artistaAlbums = data.albums.data[i].artist.name;
 
-                contenidoLista += `<a href="./detail-album.html?id=${idAlbum}">
-                                        <article class="albums">
+                contenidoLista += `<article class="albums">
+                                        <a href="./detail-album.html?id=${idAlbum}">
                                             <div class="img-container">
                                                 <img class="index-img" src="${imagenAlbums}" alt="">
                                             </div>
                                             <h5 class="titulo-elementos">${tituloAlbums}</h5>
                                             <p class="texto-elementos">${artistaAlbums}</p>
-                                        </article>
-                                    </a>`
+                                        </a>
+                                    </article>`
             }
 
             lista.innerHTML += contenidoLista
@@ -113,14 +113,14 @@ window.addEventListener('load', function () {
                 let idArtista = data.artists.data[i].id
 
 
-                contenidoLista += `<a href="./detail-artist.html?id=${idArtista}" class="artist-box">
-                                         <article class="artistas">
+                contenidoLista += `<article class="artistas">
+                                         <a href="./detail-artist.html?id=${idArtista}" class="artist-box">
                                             <div class="img-container">
                                                 <img class="index-img" src="${imagenArtists}" alt="">
                                             </div>
                                             <h5 class="titulo-elementos">${tituloArtists}</h5>
-                                        </article>
-                                    </a>`
+                                            </a>
+                                    </article>`
             }
 
             lista.innerHTML += contenidoLista;

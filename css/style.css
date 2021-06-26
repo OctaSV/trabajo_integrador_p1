@@ -101,8 +101,8 @@ header a{
     color: red;
 }
 #bienvenida{
-    margin: 0px 45px 0px 0px;
     text-align: center;
+    margin: 0px 44px 0px 0px;
     color: #246eb9ff;
 }
 
@@ -112,7 +112,6 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     padding-top: 130px;
-    margin-top: 70px;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #470044, #460047, #43004b, #42004e86, #3f005200);
@@ -168,7 +167,6 @@ footer a{
 /* ELEMENTOS */
 .titulo-elementos{
     font-size: 20px;
-    text-align: center;
     margin: 0px;
     font-family: 'Poppins', sans-serif;
 }
@@ -180,57 +178,64 @@ footer a{
 .main-canciones{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    text-align: center;
+    width: 97%;
     margin-bottom: 50px;
+    margin-left: 23px;
+    justify-content: space-around;
 }
 .canciones{
     display: flex;
-    flex-direction: column;
-    
+    width: 20%;
+    justify-content: space-around;
 }
 
 /* ALBUMS INDEX */
 .main-albums{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    text-align: center;
+    width: 97%;
     margin-bottom: 50px;
+    margin-left: 23px;
+    justify-content: space-around;
 }
 .albums{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    
+    width: 20%;
+    justify-content: space-around;
 }
 /* ARTISTAS INDEX */
 .main-artistas{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    text-align: center;
+    width: 97%;
     margin-bottom: 50px;
-
+    margin-left: 23px;
+    justify-content: space-around;
 }
 .artistas{
     display: flex;
-    flex-direction: column;
-    
+    width: 20%;
+    justify-content: space-around;
 }
 .artist-box{
     padding-bottom: 20px;
 }
+
 
 /*Colores Index*/
 span .titulos-index, .titulo-elementos, .texto-elementos{
     color: #246eb9ff;
     background-color: rgba(25, 0, 114, 0.81);
     border-radius: 5px;
-    margin-left: 15px;
-    margin-right: 15px;
 }
-.backgroundindex section a:hover{
+span .titulos-elementos, span .texto-elementos{
+    width: 90%;
+}
+.backgroundindex section article:hover{
+    border-radius: 5px;
     background-color: rgba(25, 0, 114, 0.81);
 }
 /*Detail-tracks */
@@ -290,54 +295,45 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
 }
 
 /* detail-album */
-.container-album{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content:center;
-}
 .album-image{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
 }
 .section-album{
     background-color: rgba(255, 0, 221, 0.842);
-    width: 65%;
+    width: 75%;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
-.section-album article img{
-    width: 400px;
-    padding: 20px;
-    height: auto;
-    border-radius: 25px;
-}
 .album-data{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 35%;
-    margin-left: 20px;
-}
-.album-data h3, h3 a{
-    font-weight: lighter;
-    color: black;
 }
 .album-songs{
     text-align: center;
     font-weight: bold;
     width: 65%;
 }
+.section-album article img{
+    border-radius: 25px;
+}
+.album-data h3, h3 a{
+    font-weight: lighter;
+    color: black;
+}
 .album-songs ul li a{
     color:black;
     font-weight: lighter;
 }
 
-
 /* DETAIL ARTIST */
-
 .da-main{
     display: flex;
     flex-direction: column;
@@ -347,7 +343,7 @@ span .titulos-index, .titulo-elementos, .texto-elementos{
     flex-direction: row;
     margin: 20px;
     background-color: rgba(255, 0, 221, 0.842);
-    
+    border-radius: 5px;
 }
 .da-img{
     width: 400px;
@@ -595,6 +591,7 @@ td a:hover{
     background-color: rgba(255, 0, 221, 0.842);
     width: 70%;
     align-content: center;
+    border-radius: 5px;
 }
 .article-resultado h2{
     font-style:oblique;
@@ -604,6 +601,12 @@ td a:hover{
 .resultado{
     width: 60%;
     text-align: center;
+}
+.resultado li{
+    border-radius: 5px;
+}
+.resultado li h3 a:hover{
+    text-decoration: underline;
 }
 .resultado h5 a{
     color: black;
@@ -653,18 +656,15 @@ td a:hover{
     width: 100%;
     text-align: center;
 }
-
-
 .busquedaJs {
     background-color: rgba(0, 0, 255, 0.418);
 }
-
 
 @media (max-width: 420px){
     /*Header*/
     header{
         width: 100vw;
-        height: 50vh;
+        height: 70vh;
     }
     .logo{
         display: flex;
@@ -673,7 +673,7 @@ td a:hover{
         justify-content: center;
     }
     .logo a{
-        height: 20vh;
+        height: 30vh;
     }
     .logo a{
         margin-bottom: -110px;
@@ -683,9 +683,15 @@ td a:hover{
         height: 30vh;
     }
     #gifHeader{
-        display: none;
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        margin-left: 145px;
+        align-items: center;
     }
-
+    #gifHeader h5{
+        text-align: center;
+    }
     /*Home*/
     .titulos-index{
         margin-top: 10vh;
@@ -695,33 +701,41 @@ td a:hover{
         flex-direction: column;
         align-items: center;
         margin-bottom: 10vh;
+        margin: 0px;
     }
     .main-albums{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0px;
     }
     .main-artistas{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0px;
     }
     /*Footer*/
     footer{
-        padding-top: 30vh;
-        width: 100vw;
+        margin: 0px;
     }
     /* detail tracks */
     .article-track{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 90vw;
+        padding: 30px;
+        justify-content: space-around;
     }
     .track-data{
         width: 100vw;
     }
+    .reproductor-track{
+        margin-top: 30px;
+    }
     .reproductor-track iframe{
-        width: 40vh;
+        width: 100vh;
         margin: 0px;
     }
     /* detail albums */
@@ -740,7 +754,7 @@ td a:hover{
         width: 80vw;
     }
     .album-songs{
-        margin-left: 0px;
+        width: 80vw;
     }
     .album-songs ul li a iframe{
         width: 70vw;
@@ -802,7 +816,7 @@ td a:hover{
         margin: 0px;
     }
     .playlistReco{
-        margin-top: 20px;
+        margin-top: 50px;
         margin-left: 0px;
     }
     .recomendadas ul li a{
@@ -813,21 +827,58 @@ td a:hover{
     }
     .table{
         margin: 0px;
+        padding: 20px;
     }
     #borrar{
         margin-left: 70%;
         width: 20vw;
     }
+    .recomendadas ul li{
+        padding: 0px;
+    }
+    .h1playlist{
+        margin: 30px 0px 30px 0px;
+    }
+    td, tr{
+        font-size: 17px;
+    }
     /*resultado de búsqueda*/
     .resultado-container h1{
-        margin-top: 15vh;
+        margin-top: 10vh;
+        text-align: center;
+    }
+    .article-resultado{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    .resultado{
+        width: 80vw;
+    }
+    .recomendado{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+    }
+    .recomendado ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        width: 100vw;
+    }
+    .recomendado ul li{
+        width: 25vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;    
+    }
+    .recomendado ul li a img{
+        width: 20vw;
+        height: 20vh;
     }
     .article-noresultados{
         text-align: center;
-    }
-    .recomendado{
-        text-align: center;
-        font-size: 9px;
     }
 }
 
