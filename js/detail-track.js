@@ -4,13 +4,8 @@ let cargarPag = window.addEventListener('load', function () {
         gifLoading.style.display = 'none';
 
 
-<<<<<<< HEAD
-        let queryString = location.search;
-        let queryStringToObject = new URLSearchParams(queryString); 
-=======
         let queryString = location.search
         let queryStringToObject = new URLSearchParams(queryString);
->>>>>>> f4b381919a26ddd2accfb1c1832737cb7195527f
         let id = queryStringToObject.get('id');
 
         let url_track = `https://api.deezer.com/track/${id}`;
@@ -18,33 +13,6 @@ let cargarPag = window.addEventListener('load', function () {
         let url = proxy + url_track;
 
         fetch(url)
-<<<<<<< HEAD
-            .then(function (response){
-                return response.json();
-            })
-            .then(function (data){
-                    console.log(data);
-
-                    let imagen_cancionurl = data.album.cover;
-                    let AlbumID = data.album.id;
-                    let ArtistID = data.artist.id;
-                    let nombre_cancionurl = data.title;
-                    let nombre_albumurl = data.album.title;
-                    let nombre_artistaurl = data.artist.name;
- 
-                    document.querySelector('.image-track').innerHTML = `<img src="${imagen_cancionurl}" alt="track-image">`
-                    document.querySelector('.cancion').innerHTML = `${nombre_cancionurl}`;
-                    document.querySelector('.album-track').innerHTML = `<a href="./detail-album.html?id=${AlbumID}">Album: ${nombre_albumurl}</a>`;
-                    document.querySelector('.artista-track').innerHTML = `<a href="./detail-artist.html?id=${ArtistID}">Artista: ${nombre_artistaurl}</a>`;
-                    document.querySelector('.reproductor-track').innerHTML = `<iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${id}" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write" class="iframe"></iframe>`;   
-            })
-            .catch(function(error){
-                    console.log(error);
-            })
-        
-        
-        //Agregar cancion playlist
-=======
                 .then(function (response) {
                         return response.json();
                 })
@@ -69,14 +37,16 @@ let cargarPag = window.addEventListener('load', function () {
                 })
 
 
-        //Agregar gif a lista de favoritos.
->>>>>>> f4b381919a26ddd2accfb1c1832737cb7195527f
+        //Agregar a playlist
         let favoritos = [];
+
         let recuperoStorage = localStorage.getItem('favoritos');
-        //Chequeando y agregando info
+
+
         if (recuperoStorage != null) {
                 favoritos = JSON.parse(recuperoStorage);
         }
+
         //Chequear ID
         if (favoritos.includes(id)) {
                 document.querySelector('.agregarplaylist').innerText = "Quitar de favoritos";
@@ -93,7 +63,6 @@ let cargarPag = window.addEventListener('load', function () {
                         favoritos.splice(idASacar, 1);
                         document.querySelector('.agregarplaylist').innerText = 'Agregar a Playlist';
                 } else {
-                        //Guardar ID en rray
                         favoritos.push(id);
                         console.log(favoritos);
                         document.querySelector('.agregarplaylist').innerText = 'Quitar de favoritos';

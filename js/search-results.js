@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
     gifLoading.style.display = 'none';
 
     let queryString = location.search //Caputramso qs
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let queryStringToObject = new URLSearchParams(queryString); //OL
     let aBuscar = queryStringToObject.get('search'); //Acá va el name del campo input del formulario.
 
 
@@ -73,7 +73,6 @@ window.addEventListener('load', function () {
 
 
     // Recomendados
-
     let urlRecomendados = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart`
 
     fetch(urlRecomendados)

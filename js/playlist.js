@@ -3,14 +3,14 @@ window.addEventListener('load', function() {
     let gifLoading = document.querySelector('.gif');
     gifLoading.style.display = 'none';
 
-    //Recupero el storage.
+   
     let recuperoStorage = localStorage.getItem('favoritos');
-    //Obtengo el array 
+    
     let favoritos = JSON.parse(recuperoStorage);
-    //destino de los datos en el html
+    
     let lista = document.querySelector('.table');
 
-    //Avisar al usuario que no hay canciones en su lista.
+    
     if( recuperoStorage == undefined ||  favoritos.length == 0){
 
         let alerta = confirm('Añada una canción a favoritos');
@@ -25,15 +25,15 @@ window.addEventListener('load', function() {
         }
 
     } else{
-        //Necesitamos recorrer el array de favoritos
+        
         for (let i=0; i<favoritos.length; i++){
-            //buscarYMostrarFavoritos
+            
             buscarYMostrarFavoritos(favoritos[i]);
         }
     }
     
     function buscarYMostrarFavoritos(id){
-
+        
         let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`
         
         fetch(url)
@@ -103,7 +103,6 @@ window.addEventListener('load', function() {
     })
 
     //Playlist Recomendadas
-
     let urlPlaylistReco = 'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart';
 
     fetch( urlPlaylistReco )
