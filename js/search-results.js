@@ -114,7 +114,7 @@ window.addEventListener('load', function () {
                                                     <a href="./detail-artist.html?id=${artistaB}"><img src="${imagenArtistaRecomendao}" alt=""></a>
                                                     <a href="./detail-artist.html?id=${artistaB}">Artista: ${artistaRecomendado}</a>
                                                 </li>
-                                            </ul>`
+                                            </ul>``
 
             listaResultados.innerHTML += contenidoListaResultados
 

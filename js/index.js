@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
                                     </a>`
             }
 
-            lista.innerHTML += contenidoLista
+            lista.innerHTML += contenidoLista;
 
 
         })
@@ -84,7 +84,7 @@ window.addEventListener('load', function () {
                                     </a>`
             }
 
-            lista.innerHTML += contenidoLista
+            lista.innerHTML += contenidoLista;
 
 
         })
@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
                 //  let id = data.albums.data[i].id;
                 let imagenArtists = data.artists.data[i].picture_big;
                 let tituloArtists = data.artists.data[i].name;
-                let idArtista = data.artists.data[i].id
+                let idArtista = data.artists.data[i].id;
 
 
                 contenidoLista += `<a href="./detail-artist.html?id=${idArtista}" class="artist-box">
