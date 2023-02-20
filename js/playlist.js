@@ -13,16 +13,11 @@ window.addEventListener('load', function() {
     
     if( recuperoStorage == undefined ||  favoritos.length == 0){
 
-        let alerta = confirm('Añada una canción a favoritos');
         let quitar = document.getElementById('borrar');
         let playlistVacia = document.getElementById('vacia');
         lista.style.display = 'none'
         quitar.style.display = 'none'
         playlistVacia.style.display = 'flex'
-
-        if(alerta == true){
-            window.location.href="./index.html";
-        }
 
     } else{
         
@@ -115,19 +110,23 @@ window.addEventListener('load', function() {
                 let playlistReco = document.querySelector('.recomendadas');
                 let contenidoPlaylistReco = '';
 
-                for(let i=0; i<4;i++){
-                    let imagen_playlistReco = data.playlists.data[i].picture;
-                    let title_playlistReco = data.playlists.data[i].title;
-                    let id_playlistReco = data.playlists.data[i].link;
-                    
-                    contenidoPlaylistReco +=   `<ul>
-                                                    <li>
-                                                        <a href="${id_playlistReco}"><img src="${imagen_playlistReco}" alt="img-reco" class="img-playlist-reco"></a>
-                                                        <a href="${id_playlistReco}">${title_playlistReco}</a>
-                                                    </li>
-                                                </ul>`
+                if (data.playlists.data.length !== 0) {                    
+                    for(let i=0; i<4;i++){
+                        let imagen_playlistReco = data.playlists.data[i].picture;
+                        let title_playlistReco = data.playlists.data[i].title;
+                        let id_playlistReco = data.playlists.data[i].link;
+                        
+                        contenidoPlaylistReco +=   `<ul>
+                                                        <li>
+                                                            <a href="${id_playlistReco}"><img src="${imagen_playlistReco}" alt="img-reco" class="img-playlist-reco"></a>
+                                                            <a href="${id_playlistReco}">${title_playlistReco}</a>
+                                                        </li>
+                                                    </ul>`
+                    }
+                    playlistReco.innerHTML += contenidoPlaylistReco
+                } else {
+                    playlistReco.innerHTML += '<p> Por el momento no tenemos playlists para recomendarte. </p>'
                 }
-                playlistReco.innerHTML += contenidoPlaylistReco
             })
 
 }) 
